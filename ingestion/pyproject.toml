@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "Ingestion"
+version = "0.1.0"
+description = "Base classes for ingesting data sources into data sinks."
+authors = ["Charlotte Groom <charlotte.groom@outlook.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.3.5"
+marshmallow = "^3.14.1"
+marshmallow-oneofschema = "^3.0.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
