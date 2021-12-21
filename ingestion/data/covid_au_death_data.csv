@@ -1,0 +1,1205 @@
+,date,state_name,state_code,age_group,sex,death_count,country
+0,2020-03-01,Western Australia,WA,"(70, 79)",Male,1,Australia
+1,2020-03-04,New South Wales,NSW,"(90, 99)",Female,1,Australia
+2,2020-03-08,New South Wales,NSW,"(80, 89)",Male,1,Australia
+3,2020-03-13,Queensland,QLD,"(70, 79)",Female,1,Australia
+4,2020-03-15,New South Wales,NSW,"(70, 79)",Female,1,Australia
+5,2020-03-15,New South Wales,NSW,"(90, 99)",Female,1,Australia
+6,2020-03-18,New South Wales,NSW,"(80, 89)",Male,1,Australia
+7,2020-03-20,New South Wales,NSW,"(80, 89)",Female,1,Australia
+8,2020-03-24,New South Wales,NSW,"(70, 79)",Female,1,Australia
+9,2020-03-25,Queensland,QLD,"(60, 69)",Male,1,Australia
+10,2020-03-26,Victoria,VIC,"(70, 79)",Male,3,Australia
+11,2020-03-26,Western Australia,WA,"(70, 79)",Male,1,Australia
+12,2020-03-28,New South Wales,NSW,"(90, 99)",Female,1,Australia
+13,2020-03-29,Queensland,QLD,"(70, 79)",Female,1,Australia
+14,2020-03-29,Victoria,VIC,"(80, 89)",Male,1,Australia
+15,2020-03-30,Australian Capital Territory,ACT,"(80, 89)",Female,1,Australia
+16,2020-03-30,Tasmania,TAS,"(80, 89)",Female,1,Australia
+17,2020-03-31,Tasmania,TAS,"(80, 89)",Male,1,Australia
+18,2020-04-01,New South Wales,NSW,"(90, 99)",Female,1,Australia
+19,2020-04-02,New South Wales,NSW,"(60, 69)",Female,1,Australia
+20,2020-04-02,Queensland,QLD,"(80, 89)",Male,1,Australia
+21,2020-04-02,Victoria,VIC,"(60, 69)",Female,1,Australia
+22,2020-04-02,Victoria,VIC,"(70, 79)",Female,1,Australia
+23,2020-04-03,New South Wales,NSW,"(70, 79)",Female,1,Australia
+24,2020-04-03,New South Wales,NSW,"(70, 79)",Male,1,Australia
+25,2020-04-03,Victoria,VIC,"(80, 89)",Male,1,Australia
+26,2020-04-03,Western Australia,WA,"(60, 69)",Male,1,Australia
+27,2020-04-04,Australian Capital Territory,ACT,"(80, 89)",Male,1,Australia
+28,2020-04-04,Victoria,VIC,"(70, 79)",Female,1,Australia
+29,2020-04-05,New South Wales,NSW,"(60, 69)",Male,1,Australia
+30,2020-04-05,New South Wales,NSW,"(70, 79)",Male,1,Australia
+31,2020-04-05,New South Wales,NSW,"(80, 89)",Male,1,Australia
+32,2020-04-05,New South Wales,NSW,"(90, 99)",Male,1,Australia
+33,2020-04-05,Queensland,QLD,"(70, 79)",Male,1,Australia
+34,2020-04-06,New South Wales,NSW,"(80, 89)",Male,2,Australia
+35,2020-04-06,Victoria,VIC,"(50, 59)",Male,1,Australia
+36,2020-04-06,Victoria,VIC,"(80, 89)",Female,1,Australia
+37,2020-04-06,Western Australia,WA,"(80, 89)",Male,1,Australia
+38,2020-04-07,New South Wales,NSW,"(80, 89)",Female,1,Australia
+39,2020-04-07,New South Wales,NSW,"(90, 99)",Male,2,Australia
+40,2020-04-07,South Australia,SA,"(70, 79)",Male,1,Australia
+41,2020-04-07,Tasmania,TAS,"(80, 89)",Male,1,Australia
+42,2020-04-07,Victoria,VIC,"(80, 89)",Female,1,Australia
+43,2020-04-07,Western Australia,WA,"(70, 79)",Female,1,Australia
+44,2020-04-07,Western Australia,WA,"(70, 79)",Male,1,Australia
+45,2020-04-08,South Australia,SA,"(60, 69)",Female,1,Australia
+46,2020-04-08,Victoria,VIC,"(80, 89)",Female,1,Australia
+47,2020-04-09,South Australia,SA,"(70, 79)",Male,1,Australia
+48,2020-04-10,New South Wales,NSW,"(60, 69)",Female,1,Australia
+49,2020-04-10,Tasmania,TAS,"(70, 79)",Male,1,Australia
+50,2020-04-10,Victoria,VIC,"(80, 89)",Male,1,Australia
+51,2020-04-11,New South Wales,NSW,"(90, 99)",Female,1,Australia
+52,2020-04-11,Victoria,VIC,"(80, 89)",Male,1,Australia
+53,2020-04-12,New South Wales,NSW,"(80, 89)",Male,1,Australia
+54,2020-04-12,South Australia,SA,"(70, 79)",Male,1,Australia
+55,2020-04-12,Tasmania,TAS,"(70, 79)",Female,1,Australia
+56,2020-04-13,New South Wales,NSW,"(70, 79)",Female,1,Australia
+57,2020-04-13,New South Wales,NSW,"(70, 79)",Male,1,Australia
+58,2020-04-14,Tasmania,TAS,"(90, 99)",Female,1,Australia
+59,2020-04-15,Australian Capital Territory,ACT,"(60, 69)",Female,1,Australia
+60,2020-04-17,Tasmania,TAS,"(70, 79)",Male,1,Australia
+61,2020-04-17,Western Australia,WA,"(40, 49)",Male,1,Australia
+62,2020-04-18,New South Wales,NSW,"(50, 59)",Female,1,Australia
+63,2020-04-18,Queensland,QLD,"(80, 89)",Male,1,Australia
+64,2020-04-18,Tasmania,TAS,"(70, 79)",Male,1,Australia
+65,2020-04-19,New South Wales,NSW,"(90, 99)",Male,1,Australia
+66,2020-04-19,Victoria,VIC,"(80, 89)",Male,1,Australia
+67,2020-04-20,New South Wales,NSW,"(90, 99)",Male,1,Australia
+68,2020-04-22,New South Wales,NSW,"(70, 79)",Male,1,Australia
+69,2020-04-22,New South Wales,NSW,"(80, 89)",Female,1,Australia
+70,2020-04-22,New South Wales,NSW,"(90, 99)",Female,1,Australia
+71,2020-04-23,Victoria,VIC,"(60, 69)",Male,1,Australia
+72,2020-04-24,New South Wales,NSW,"(70, 79)",Female,1,Australia
+73,2020-04-24,Tasmania,TAS,"(70, 79)",Female,1,Australia
+74,2020-04-24,Western Australia,WA,"(70, 79)",Male,1,Australia
+75,2020-04-25,New South Wales,NSW,"(90, 99)",Female,1,Australia
+76,2020-04-25,Tasmania,TAS,"(90, 99)",Male,1,Australia
+77,2020-04-26,New South Wales,NSW,"(80, 89)",Male,1,Australia
+78,2020-04-26,Tasmania,TAS,"(90, 99)",Male,1,Australia
+79,2020-04-26,Victoria,VIC,"(90, 99)",Male,1,Australia
+80,2020-04-28,New South Wales,NSW,"(80, 89)",Female,1,Australia
+81,2020-04-29,New South Wales,NSW,"(80, 89)",Female,1,Australia
+82,2020-04-29,New South Wales,NSW,"(90, 99)",Female,3,Australia
+83,2020-04-29,Victoria,VIC,"(80, 89)",Female,1,Australia
+84,2020-04-30,New South Wales,NSW,"(70, 79)",Male,1,Australia
+85,2020-04-30,Tasmania,TAS,"(80, 89)",Female,1,Australia
+86,2020-05-01,New South Wales,NSW,"(70, 79)",Male,1,Australia
+87,2020-05-01,Tasmania,TAS,"(80, 89)",Female,1,Australia
+88,2020-05-03,New South Wales,NSW,"(70, 79)",Female,1,Australia
+89,2020-05-03,Western Australia,WA,"(80, 89)",Female,1,Australia
+90,2020-05-05,New South Wales,NSW,"(70, 79)",Male,1,Australia
+91,2020-05-05,New South Wales,NSW,"(80, 89)",Female,1,Australia
+92,2020-05-13,New South Wales,NSW,"(80, 89)",Female,1,Australia
+93,2020-05-18,New South Wales,NSW,"(60, 69)",Male,1,Australia
+94,2020-05-20,New South Wales,NSW,"(90, 99)",Female,1,Australia
+95,2020-05-22,New South Wales,NSW,"(80, 89)",Female,1,Australia
+96,2020-05-23,Victoria,VIC,"(60, 69)",Male,1,Australia
+97,2020-06-24,Victoria,VIC,"(80, 89)",Male,1,Australia
+98,2020-06-25,New South Wales,NSW,"(80, 89)",Male,1,Australia
+99,2020-07-06,Victoria,VIC,"(60, 69)",Male,1,Australia
+100,2020-07-06,Victoria,VIC,"(90, 99)",Male,1,Australia
+101,2020-07-11,Victoria,VIC,"(90, 99)",Male,1,Australia
+102,2020-07-12,Victoria,VIC,"(70, 79)",Male,1,Australia
+103,2020-07-14,Victoria,VIC,"(80, 89)",Female,1,Australia
+104,2020-07-14,Victoria,VIC,"(80, 89)",Male,1,Australia
+105,2020-07-15,Victoria,VIC,"(90, 99)",Female,1,Australia
+106,2020-07-16,Victoria,VIC,"(80, 89)",Male,2,Australia
+107,2020-07-17,Victoria,VIC,"(70, 79)",Male,1,Australia
+108,2020-07-17,Victoria,VIC,"(80, 89)",Female,1,Australia
+109,2020-07-17,Victoria,VIC,"(80, 89)",Male,1,Australia
+110,2020-07-18,Victoria,VIC,"(80, 89)",Female,1,Australia
+111,2020-07-18,Victoria,VIC,"(80, 89)",Male,1,Australia
+112,2020-07-18,Victoria,VIC,"(90, 99)",Female,1,Australia
+113,2020-07-19,Victoria,VIC,"(90, 99)",Female,1,Australia
+114,2020-07-19,Victoria,VIC,"(90, 99)",Male,2,Australia
+115,2020-07-20,Victoria,VIC,"(80, 89)",Female,1,Australia
+116,2020-07-21,Victoria,VIC,"(80, 89)",Female,1,Australia
+117,2020-07-21,Victoria,VIC,"(90, 99)",Female,1,Australia
+118,2020-07-21,Victoria,VIC,"(100, 109)",Female,1,Australia
+119,2020-07-22,Victoria,VIC,"(90, 99)",Male,2,Australia
+120,2020-07-23,Victoria,VIC,"(50, 59)",Male,1,Australia
+121,2020-07-23,Victoria,VIC,"(70, 79)",Female,1,Australia
+122,2020-07-23,Victoria,VIC,"(70, 79)",Male,1,Australia
+123,2020-07-23,Victoria,VIC,"(80, 89)",Male,1,Australia
+124,2020-07-23,Victoria,VIC,"(90, 99)",Male,1,Australia
+125,2020-07-24,Victoria,VIC,"(80, 89)",Female,2,Australia
+126,2020-07-24,Victoria,VIC,"(80, 89)",Male,2,Australia
+127,2020-07-24,Victoria,VIC,"(90, 99)",Female,1,Australia
+128,2020-07-24,Victoria,VIC,"(90, 99)",Male,2,Australia
+129,2020-07-25,Victoria,VIC,"(60, 69)",Female,1,Australia
+130,2020-07-25,Victoria,VIC,"(70, 79)",Female,1,Australia
+131,2020-07-25,Victoria,VIC,"(80, 89)",Female,1,Australia
+132,2020-07-25,Victoria,VIC,"(80, 89)",Male,1,Australia
+133,2020-07-25,Victoria,VIC,"(90, 99)",Female,1,Australia
+134,2020-07-26,Victoria,VIC,"(40, 49)",Male,1,Australia
+135,2020-07-26,Victoria,VIC,"(60, 69)",Male,1,Australia
+136,2020-07-26,Victoria,VIC,"(70, 79)",Female,1,Australia
+137,2020-07-26,Victoria,VIC,"(70, 79)",Male,3,Australia
+138,2020-07-26,Victoria,VIC,"(80, 89)",Female,2,Australia
+139,2020-07-26,Victoria,VIC,"(80, 89)",Male,2,Australia
+140,2020-07-27,Victoria,VIC,"(50, 59)",Male,1,Australia
+141,2020-07-27,Victoria,VIC,"(70, 79)",Female,1,Australia
+142,2020-07-27,Victoria,VIC,"(70, 79)",Male,1,Australia
+143,2020-07-27,Victoria,VIC,"(80, 89)",Female,1,Australia
+144,2020-07-27,Victoria,VIC,"(80, 89)",Male,1,Australia
+145,2020-07-27,Victoria,VIC,"(90, 99)",Female,1,Australia
+146,2020-07-28,Victoria,VIC,"(70, 79)",Male,1,Australia
+147,2020-07-28,Victoria,VIC,"(80, 89)",Female,2,Australia
+148,2020-07-28,Victoria,VIC,"(80, 89)",Male,1,Australia
+149,2020-07-28,Victoria,VIC,"(90, 99)",Female,1,Australia
+150,2020-07-28,Victoria,VIC,"(90, 99)",Male,1,Australia
+151,2020-07-29,Victoria,VIC,"(60, 69)",Male,1,Australia
+152,2020-07-29,Victoria,VIC,"(70, 79)",Male,1,Australia
+153,2020-07-29,Victoria,VIC,"(80, 89)",Female,2,Australia
+154,2020-07-29,Victoria,VIC,"(80, 89)",Male,3,Australia
+155,2020-07-29,Victoria,VIC,"(90, 99)",Female,2,Australia
+156,2020-07-30,Victoria,VIC,"(70, 79)",Female,3,Australia
+157,2020-07-30,Victoria,VIC,"(70, 79)",Male,3,Australia
+158,2020-07-30,Victoria,VIC,"(80, 89)",Female,2,Australia
+159,2020-07-30,Victoria,VIC,"(80, 89)",Male,3,Australia
+160,2020-07-30,Victoria,VIC,"(90, 99)",Male,2,Australia
+161,2020-07-31,Victoria,VIC,"(50, 59)",Male,2,Australia
+162,2020-07-31,Victoria,VIC,"(70, 79)",Female,1,Australia
+163,2020-07-31,Victoria,VIC,"(70, 79)",Male,2,Australia
+164,2020-07-31,Victoria,VIC,"(80, 89)",Male,3,Australia
+165,2020-08-01,New South Wales,NSW,"(80, 89)",Male,1,Australia
+166,2020-08-01,Victoria,VIC,"(80, 89)",Female,1,Australia
+167,2020-08-01,Victoria,VIC,"(80, 89)",Male,1,Australia
+168,2020-08-01,Victoria,VIC,"(90, 99)",Female,1,Australia
+169,2020-08-02,Victoria,VIC,"(70, 79)",Female,3,Australia
+170,2020-08-02,Victoria,VIC,"(80, 89)",Female,2,Australia
+171,2020-08-02,Victoria,VIC,"(90, 99)",Female,1,Australia
+172,2020-08-02,Victoria,VIC,"(90, 99)",Male,1,Australia
+173,2020-08-03,Victoria,VIC,"(60, 69)",Male,1,Australia
+174,2020-08-03,Victoria,VIC,"(70, 79)",Female,1,Australia
+175,2020-08-03,Victoria,VIC,"(70, 79)",Male,2,Australia
+176,2020-08-03,Victoria,VIC,"(80, 89)",Male,2,Australia
+177,2020-08-03,Victoria,VIC,"(90, 99)",Female,5,Australia
+178,2020-08-03,Victoria,VIC,"(90, 99)",Male,2,Australia
+179,2020-08-04,Victoria,VIC,"(70, 79)",Male,1,Australia
+180,2020-08-04,Victoria,VIC,"(80, 89)",Female,3,Australia
+181,2020-08-04,Victoria,VIC,"(80, 89)",Male,1,Australia
+182,2020-08-04,Victoria,VIC,"(90, 99)",Female,3,Australia
+183,2020-08-04,Victoria,VIC,"(90, 99)",Male,2,Australia
+184,2020-08-04,Victoria,VIC,"(100, 109)",Female,1,Australia
+185,2020-08-05,Victoria,VIC,"(30, 39)",Male,1,Australia
+186,2020-08-05,Victoria,VIC,"(70, 79)",Female,1,Australia
+187,2020-08-05,Victoria,VIC,"(70, 79)",Male,3,Australia
+188,2020-08-05,Victoria,VIC,"(80, 89)",Female,3,Australia
+189,2020-08-05,Victoria,VIC,"(80, 89)",Male,3,Australia
+190,2020-08-05,Victoria,VIC,"(90, 99)",Female,1,Australia
+191,2020-08-05,Victoria,VIC,"(90, 99)",Male,3,Australia
+192,2020-08-06,Victoria,VIC,"(60, 69)",Male,2,Australia
+193,2020-08-06,Victoria,VIC,"(80, 89)",Female,2,Australia
+194,2020-08-06,Victoria,VIC,"(80, 89)",Male,3,Australia
+195,2020-08-06,Victoria,VIC,"(90, 99)",Female,1,Australia
+196,2020-08-07,Victoria,VIC,"(50, 59)",Female,1,Australia
+197,2020-08-07,Victoria,VIC,"(70, 79)",Male,2,Australia
+198,2020-08-07,Victoria,VIC,"(80, 89)",Female,3,Australia
+199,2020-08-07,Victoria,VIC,"(80, 89)",Male,3,Australia
+200,2020-08-07,Victoria,VIC,"(90, 99)",Female,2,Australia
+201,2020-08-08,Victoria,VIC,"(30, 39)",Male,1,Australia
+202,2020-08-08,Victoria,VIC,"(70, 79)",Male,2,Australia
+203,2020-08-08,Victoria,VIC,"(80, 89)",Female,3,Australia
+204,2020-08-08,Victoria,VIC,"(80, 89)",Male,2,Australia
+205,2020-08-08,Victoria,VIC,"(90, 99)",Female,4,Australia
+206,2020-08-09,Victoria,VIC,"(50, 59)",Male,2,Australia
+207,2020-08-09,Victoria,VIC,"(70, 79)",Male,4,Australia
+208,2020-08-09,Victoria,VIC,"(80, 89)",Female,4,Australia
+209,2020-08-09,Victoria,VIC,"(80, 89)",Male,2,Australia
+210,2020-08-09,Victoria,VIC,"(90, 99)",Female,2,Australia
+211,2020-08-09,Victoria,VIC,"(90, 99)",Male,3,Australia
+212,2020-08-10,Victoria,VIC,"(50, 59)",Male,1,Australia
+213,2020-08-10,Victoria,VIC,"(60, 69)",Female,1,Australia
+214,2020-08-10,Victoria,VIC,"(70, 79)",Male,2,Australia
+215,2020-08-10,Victoria,VIC,"(80, 89)",Female,6,Australia
+216,2020-08-10,Victoria,VIC,"(80, 89)",Male,1,Australia
+217,2020-08-10,Victoria,VIC,"(90, 99)",Female,7,Australia
+218,2020-08-10,Victoria,VIC,"(90, 99)",Male,1,Australia
+219,2020-08-11,Victoria,VIC,"(50, 59)",Female,1,Australia
+220,2020-08-11,Victoria,VIC,"(70, 79)",Male,1,Australia
+221,2020-08-11,Victoria,VIC,"(80, 89)",Female,6,Australia
+222,2020-08-11,Victoria,VIC,"(80, 89)",Male,4,Australia
+223,2020-08-11,Victoria,VIC,"(90, 99)",Female,4,Australia
+224,2020-08-11,Victoria,VIC,"(90, 99)",Male,3,Australia
+225,2020-08-12,Victoria,VIC,"(70, 79)",Female,2,Australia
+226,2020-08-12,Victoria,VIC,"(70, 79)",Male,1,Australia
+227,2020-08-12,Victoria,VIC,"(80, 89)",Female,6,Australia
+228,2020-08-12,Victoria,VIC,"(80, 89)",Male,5,Australia
+229,2020-08-12,Victoria,VIC,"(90, 99)",Female,1,Australia
+230,2020-08-12,Victoria,VIC,"(90, 99)",Male,5,Australia
+231,2020-08-12,Victoria,VIC,"(100, 109)",Female,1,Australia
+232,2020-08-13,New South Wales,NSW,"(80, 89)",Female,1,Australia
+233,2020-08-13,Victoria,VIC,"(50, 59)",Female,1,Australia
+234,2020-08-13,Victoria,VIC,"(70, 79)",Male,2,Australia
+235,2020-08-13,Victoria,VIC,"(80, 89)",Female,2,Australia
+236,2020-08-13,Victoria,VIC,"(80, 89)",Male,2,Australia
+237,2020-08-13,Victoria,VIC,"(90, 99)",Male,1,Australia
+238,2020-08-14,Victoria,VIC,"(20, 29)",Male,1,Australia
+239,2020-08-14,Victoria,VIC,"(80, 89)",Female,3,Australia
+240,2020-08-14,Victoria,VIC,"(80, 89)",Male,2,Australia
+241,2020-08-14,Victoria,VIC,"(90, 99)",Female,4,Australia
+242,2020-08-14,Victoria,VIC,"(90, 99)",Male,4,Australia
+243,2020-08-15,Victoria,VIC,"(80, 89)",Female,1,Australia
+244,2020-08-15,Victoria,VIC,"(80, 89)",Male,2,Australia
+245,2020-08-15,Victoria,VIC,"(90, 99)",Female,1,Australia
+246,2020-08-16,New South Wales,NSW,"(80, 89)",Male,1,Australia
+247,2020-08-16,Victoria,VIC,"(70, 79)",Female,1,Australia
+248,2020-08-16,Victoria,VIC,"(70, 79)",Male,2,Australia
+249,2020-08-16,Victoria,VIC,"(80, 89)",Female,2,Australia
+250,2020-08-16,Victoria,VIC,"(80, 89)",Male,4,Australia
+251,2020-08-16,Victoria,VIC,"(90, 99)",Female,4,Australia
+252,2020-08-16,Victoria,VIC,"(90, 99)",Male,3,Australia
+253,2020-08-17,Victoria,VIC,"(60, 69)",Male,1,Australia
+254,2020-08-17,Victoria,VIC,"(70, 79)",Female,4,Australia
+255,2020-08-17,Victoria,VIC,"(70, 79)",Male,3,Australia
+256,2020-08-17,Victoria,VIC,"(80, 89)",Female,6,Australia
+257,2020-08-17,Victoria,VIC,"(80, 89)",Male,4,Australia
+258,2020-08-17,Victoria,VIC,"(90, 99)",Female,4,Australia
+259,2020-08-17,Victoria,VIC,"(90, 99)",Male,3,Australia
+260,2020-08-18,Victoria,VIC,"(60, 69)",Male,1,Australia
+261,2020-08-18,Victoria,VIC,"(70, 79)",Female,1,Australia
+262,2020-08-18,Victoria,VIC,"(70, 79)",Male,1,Australia
+263,2020-08-18,Victoria,VIC,"(80, 89)",Female,2,Australia
+264,2020-08-18,Victoria,VIC,"(80, 89)",Male,4,Australia
+265,2020-08-18,Victoria,VIC,"(90, 99)",Female,4,Australia
+266,2020-08-18,Victoria,VIC,"(90, 99)",Male,4,Australia
+267,2020-08-19,Victoria,VIC,"(70, 79)",Male,3,Australia
+268,2020-08-19,Victoria,VIC,"(80, 89)",Female,4,Australia
+269,2020-08-19,Victoria,VIC,"(80, 89)",Male,1,Australia
+270,2020-08-19,Victoria,VIC,"(90, 99)",Female,3,Australia
+271,2020-08-19,Victoria,VIC,"(90, 99)",Male,2,Australia
+272,2020-08-20,Victoria,VIC,"(70, 79)",Male,1,Australia
+273,2020-08-20,Victoria,VIC,"(80, 89)",Female,6,Australia
+274,2020-08-20,Victoria,VIC,"(90, 99)",Female,5,Australia
+275,2020-08-20,Victoria,VIC,"(90, 99)",Male,1,Australia
+276,2020-08-21,Victoria,VIC,"(60, 69)",Male,1,Australia
+277,2020-08-21,Victoria,VIC,"(70, 79)",Female,1,Australia
+278,2020-08-21,Victoria,VIC,"(80, 89)",Female,2,Australia
+279,2020-08-21,Victoria,VIC,"(80, 89)",Male,2,Australia
+280,2020-08-21,Victoria,VIC,"(90, 99)",Female,1,Australia
+281,2020-08-21,Victoria,VIC,"(90, 99)",Male,1,Australia
+282,2020-08-21,Victoria,VIC,"(100, 109)",Male,1,Australia
+283,2020-08-22,Victoria,VIC,"(50, 59)",Male,1,Australia
+284,2020-08-22,Victoria,VIC,"(70, 79)",Female,1,Australia
+285,2020-08-22,Victoria,VIC,"(80, 89)",Female,3,Australia
+286,2020-08-22,Victoria,VIC,"(80, 89)",Male,2,Australia
+287,2020-08-22,Victoria,VIC,"(90, 99)",Female,3,Australia
+288,2020-08-22,Victoria,VIC,"(90, 99)",Male,2,Australia
+289,2020-08-22,Victoria,VIC,"(100, 109)",Female,1,Australia
+290,2020-08-23,Victoria,VIC,"(60, 69)",Female,1,Australia
+291,2020-08-23,Victoria,VIC,"(60, 69)",Male,1,Australia
+292,2020-08-23,Victoria,VIC,"(70, 79)",Male,3,Australia
+293,2020-08-23,Victoria,VIC,"(80, 89)",Female,4,Australia
+294,2020-08-23,Victoria,VIC,"(80, 89)",Male,6,Australia
+295,2020-08-23,Victoria,VIC,"(90, 99)",Male,2,Australia
+296,2020-08-24,Victoria,VIC,"(80, 89)",Female,3,Australia
+297,2020-08-24,Victoria,VIC,"(80, 89)",Male,5,Australia
+298,2020-08-24,Victoria,VIC,"(90, 99)",Female,4,Australia
+299,2020-08-24,Victoria,VIC,"(90, 99)",Male,2,Australia
+300,2020-08-24,Victoria,VIC,"(100, 109)",Female,1,Australia
+301,2020-08-25,Victoria,VIC,"(70, 79)",Male,2,Australia
+302,2020-08-25,Victoria,VIC,"(80, 89)",Female,4,Australia
+303,2020-08-25,Victoria,VIC,"(80, 89)",Male,1,Australia
+304,2020-08-25,Victoria,VIC,"(90, 99)",Female,1,Australia
+305,2020-08-26,Victoria,VIC,"(60, 69)",Female,1,Australia
+306,2020-08-26,Victoria,VIC,"(70, 79)",Male,3,Australia
+307,2020-08-26,Victoria,VIC,"(80, 89)",Female,3,Australia
+308,2020-08-26,Victoria,VIC,"(80, 89)",Male,7,Australia
+309,2020-08-26,Victoria,VIC,"(90, 99)",Female,6,Australia
+310,2020-08-26,Victoria,VIC,"(90, 99)",Male,4,Australia
+311,2020-08-27,Victoria,VIC,"(70, 79)",Female,1,Australia
+312,2020-08-27,Victoria,VIC,"(70, 79)",Male,4,Australia
+313,2020-08-27,Victoria,VIC,"(80, 89)",Female,6,Australia
+314,2020-08-27,Victoria,VIC,"(80, 89)",Male,3,Australia
+315,2020-08-27,Victoria,VIC,"(90, 99)",Female,5,Australia
+316,2020-08-27,Victoria,VIC,"(90, 99)",Male,3,Australia
+317,2020-08-28,Victoria,VIC,"(70, 79)",Male,1,Australia
+318,2020-08-28,Victoria,VIC,"(80, 89)",Female,2,Australia
+319,2020-08-28,Victoria,VIC,"(80, 89)",Male,1,Australia
+320,2020-08-28,Victoria,VIC,"(90, 99)",Female,4,Australia
+321,2020-08-28,Victoria,VIC,"(90, 99)",Male,3,Australia
+322,2020-08-29,Victoria,VIC,"(60, 69)",Female,1,Australia
+323,2020-08-29,Victoria,VIC,"(70, 79)",Female,1,Australia
+324,2020-08-29,Victoria,VIC,"(70, 79)",Male,2,Australia
+325,2020-08-29,Victoria,VIC,"(80, 89)",Female,4,Australia
+326,2020-08-29,Victoria,VIC,"(80, 89)",Male,5,Australia
+327,2020-08-29,Victoria,VIC,"(90, 99)",Female,1,Australia
+328,2020-08-29,Victoria,VIC,"(90, 99)",Male,4,Australia
+329,2020-08-30,Victoria,VIC,"(70, 79)",Male,1,Australia
+330,2020-08-30,Victoria,VIC,"(80, 89)",Female,5,Australia
+331,2020-08-30,Victoria,VIC,"(80, 89)",Male,1,Australia
+332,2020-08-30,Victoria,VIC,"(90, 99)",Female,3,Australia
+333,2020-08-30,Victoria,VIC,"(90, 99)",Male,1,Australia
+334,2020-08-31,Victoria,VIC,"(70, 79)",Female,4,Australia
+335,2020-08-31,Victoria,VIC,"(70, 79)",Male,3,Australia
+336,2020-08-31,Victoria,VIC,"(80, 89)",Female,10,Australia
+337,2020-08-31,Victoria,VIC,"(80, 89)",Male,7,Australia
+338,2020-08-31,Victoria,VIC,"(90, 99)",Female,13,Australia
+339,2020-08-31,Victoria,VIC,"(90, 99)",Male,3,Australia
+340,2020-08-31,Victoria,VIC,"(100, 109)",Female,1,Australia
+341,2020-09-01,Victoria,VIC,"(70, 79)",Female,2,Australia
+342,2020-09-01,Victoria,VIC,"(80, 89)",Female,2,Australia
+343,2020-09-01,Victoria,VIC,"(90, 99)",Female,1,Australia
+344,2020-09-02,Victoria,VIC,"(80, 89)",Male,5,Australia
+345,2020-09-02,Victoria,VIC,"(90, 99)",Male,1,Australia
+346,2020-09-03,Victoria,VIC,"(80, 89)",Female,3,Australia
+347,2020-09-03,Victoria,VIC,"(80, 89)",Male,4,Australia
+348,2020-09-03,Victoria,VIC,"(90, 99)",Female,6,Australia
+349,2020-09-03,Victoria,VIC,"(90, 99)",Male,2,Australia
+350,2020-09-04,Victoria,VIC,"(60, 69)",Female,1,Australia
+351,2020-09-04,Victoria,VIC,"(70, 79)",Female,3,Australia
+352,2020-09-04,Victoria,VIC,"(70, 79)",Male,7,Australia
+353,2020-09-04,Victoria,VIC,"(80, 89)",Female,10,Australia
+354,2020-09-04,Victoria,VIC,"(80, 89)",Male,11,Australia
+355,2020-09-04,Victoria,VIC,"(90, 99)",Female,22,Australia
+356,2020-09-04,Victoria,VIC,"(90, 99)",Male,4,Australia
+357,2020-09-04,Victoria,VIC,"(100, 109)",Female,1,Australia
+358,2020-09-05,Victoria,VIC,"(60, 69)",Male,1,Australia
+359,2020-09-05,Victoria,VIC,"(70, 79)",Male,1,Australia
+360,2020-09-05,Victoria,VIC,"(80, 89)",Female,2,Australia
+361,2020-09-05,Victoria,VIC,"(80, 89)",Male,2,Australia
+362,2020-09-05,Victoria,VIC,"(90, 99)",Female,3,Australia
+363,2020-09-05,Victoria,VIC,"(90, 99)",Male,2,Australia
+364,2020-09-06,Victoria,VIC,"(80, 89)",Female,1,Australia
+365,2020-09-06,Victoria,VIC,"(90, 99)",Female,3,Australia
+366,2020-09-06,Victoria,VIC,"(100, 109)",Female,1,Australia
+367,2020-09-07,Victoria,VIC,"(70, 79)",Female,1,Australia
+368,2020-09-07,Victoria,VIC,"(80, 89)",Female,1,Australia
+369,2020-09-07,Victoria,VIC,"(80, 89)",Male,3,Australia
+370,2020-09-07,Victoria,VIC,"(90, 99)",Female,1,Australia
+371,2020-09-07,Victoria,VIC,"(90, 99)",Male,3,Australia
+372,2020-09-08,Victoria,VIC,"(60, 69)",Male,2,Australia
+373,2020-09-08,Victoria,VIC,"(80, 89)",Male,2,Australia
+374,2020-09-08,Victoria,VIC,"(90, 99)",Female,1,Australia
+375,2020-09-08,Victoria,VIC,"(90, 99)",Male,3,Australia
+376,2020-09-09,Victoria,VIC,"(60, 69)",Female,1,Australia
+377,2020-09-09,Victoria,VIC,"(80, 89)",Female,3,Australia
+378,2020-09-09,Victoria,VIC,"(80, 89)",Male,2,Australia
+379,2020-09-09,Victoria,VIC,"(90, 99)",Female,3,Australia
+380,2020-09-09,Victoria,VIC,"(90, 99)",Male,2,Australia
+381,2020-09-10,Victoria,VIC,"(70, 79)",Male,4,Australia
+382,2020-09-10,Victoria,VIC,"(80, 89)",Female,2,Australia
+383,2020-09-10,Victoria,VIC,"(80, 89)",Male,1,Australia
+384,2020-09-11,Victoria,VIC,"(50, 59)",Female,1,Australia
+385,2020-09-11,Victoria,VIC,"(70, 79)",Female,1,Australia
+386,2020-09-11,Victoria,VIC,"(80, 89)",Male,3,Australia
+387,2020-09-11,Victoria,VIC,"(90, 99)",Female,4,Australia
+388,2020-09-12,Victoria,VIC,"(80, 89)",Female,2,Australia
+389,2020-09-12,Victoria,VIC,"(80, 89)",Male,1,Australia
+390,2020-09-12,Victoria,VIC,"(90, 99)",Female,2,Australia
+391,2020-09-12,Victoria,VIC,"(90, 99)",Male,1,Australia
+392,2020-09-13,Victoria,VIC,"(70, 79)",Female,1,Australia
+393,2020-09-13,Victoria,VIC,"(80, 89)",Female,1,Australia
+394,2020-09-13,Victoria,VIC,"(90, 99)",Female,4,Australia
+395,2020-09-14,Victoria,VIC,"(70, 79)",Male,1,Australia
+396,2020-09-14,Victoria,VIC,"(80, 89)",Female,1,Australia
+397,2020-09-14,Victoria,VIC,"(80, 89)",Male,1,Australia
+398,2020-09-14,Victoria,VIC,"(90, 99)",Female,1,Australia
+399,2020-09-14,Victoria,VIC,"(90, 99)",Male,3,Australia
+400,2020-09-16,Victoria,VIC,"(80, 89)",Female,4,Australia
+401,2020-09-16,Victoria,VIC,"(80, 89)",Male,2,Australia
+402,2020-09-16,Victoria,VIC,"(90, 99)",Male,2,Australia
+403,2020-09-17,Victoria,VIC,"(60, 69)",Female,1,Australia
+404,2020-09-17,Victoria,VIC,"(80, 89)",Male,2,Australia
+405,2020-09-17,Victoria,VIC,"(90, 99)",Female,3,Australia
+406,2020-09-17,Victoria,VIC,"(90, 99)",Male,2,Australia
+407,2020-09-18,Victoria,VIC,"(50, 59)",Male,1,Australia
+408,2020-09-18,Victoria,VIC,"(70, 79)",Male,1,Australia
+409,2020-09-18,Victoria,VIC,"(80, 89)",Male,1,Australia
+410,2020-09-18,Victoria,VIC,"(90, 99)",Female,2,Australia
+411,2020-09-19,Victoria,VIC,"(60, 69)",Male,1,Australia
+412,2020-09-19,Victoria,VIC,"(80, 89)",Male,3,Australia
+413,2020-09-19,Victoria,VIC,"(90, 99)",Female,2,Australia
+414,2020-09-20,New South Wales,NSW,"(70, 79)",Male,1,Australia
+415,2020-09-20,Victoria,VIC,"(80, 89)",Female,2,Australia
+416,2020-09-20,Victoria,VIC,"(80, 89)",Male,2,Australia
+417,2020-09-20,Victoria,VIC,"(90, 99)",Female,1,Australia
+418,2020-09-21,Victoria,VIC,"(80, 89)",Female,1,Australia
+419,2020-09-21,Victoria,VIC,"(100, 109)",Female,1,Australia
+420,2020-09-22,Victoria,VIC,"(70, 79)",Female,1,Australia
+421,2020-09-22,Victoria,VIC,"(90, 99)",Female,1,Australia
+422,2020-09-22,Victoria,VIC,"(100, 109)",Female,1,Australia
+423,2020-09-23,Victoria,VIC,"(70, 79)",Male,1,Australia
+424,2020-09-23,Victoria,VIC,"(80, 89)",Female,2,Australia
+425,2020-09-23,Victoria,VIC,"(90, 99)",Male,1,Australia
+426,2020-09-23,Victoria,VIC,"(100, 109)",Female,1,Australia
+427,2020-09-24,Victoria,VIC,"(80, 89)",Female,2,Australia
+428,2020-09-25,Victoria,VIC,"(60, 69)",Male,1,Australia
+429,2020-09-25,Victoria,VIC,"(70, 79)",Female,1,Australia
+430,2020-09-25,Victoria,VIC,"(80, 89)",Female,3,Australia
+431,2020-09-25,Victoria,VIC,"(80, 89)",Male,1,Australia
+432,2020-09-25,Victoria,VIC,"(90, 99)",Female,1,Australia
+433,2020-09-25,Victoria,VIC,"(90, 99)",Male,1,Australia
+434,2020-09-26,Victoria,VIC,"(80, 89)",Female,1,Australia
+435,2020-09-27,Victoria,VIC,"(70, 79)",Male,2,Australia
+436,2020-09-28,Victoria,VIC,"(60, 69)",Male,1,Australia
+437,2020-09-28,Victoria,VIC,"(80, 89)",Female,1,Australia
+438,2020-09-28,Victoria,VIC,"(90, 99)",Male,1,Australia
+439,2020-09-29,Victoria,VIC,"(60, 69)",Male,1,Australia
+440,2020-09-29,Victoria,VIC,"(70, 79)",Male,1,Australia
+441,2020-09-29,Victoria,VIC,"(80, 89)",Female,1,Australia
+442,2020-09-29,Victoria,VIC,"(80, 89)",Male,2,Australia
+443,2020-09-29,Victoria,VIC,"(90, 99)",Female,1,Australia
+444,2020-09-29,Victoria,VIC,"(90, 99)",Male,1,Australia
+445,2020-09-30,Victoria,VIC,"(70, 79)",Female,1,Australia
+446,2020-09-30,Victoria,VIC,"(80, 89)",Female,1,Australia
+447,2020-09-30,Victoria,VIC,"(90, 99)",Female,1,Australia
+448,2020-09-30,Victoria,VIC,"(90, 99)",Male,1,Australia
+449,2020-10-01,Victoria,VIC,"(70, 79)",Female,1,Australia
+450,2020-10-01,Victoria,VIC,"(90, 99)",Female,1,Australia
+451,2020-10-02,Victoria,VIC,"(80, 89)",Female,1,Australia
+452,2020-10-02,Victoria,VIC,"(80, 89)",Male,1,Australia
+453,2020-10-03,Victoria,VIC,"(80, 89)",Female,1,Australia
+454,2020-10-03,Victoria,VIC,"(90, 99)",Female,2,Australia
+455,2020-10-04,Victoria,VIC,"(80, 89)",Male,1,Australia
+456,2020-10-06,Victoria,VIC,"(90, 99)",Female,1,Australia
+457,2020-10-07,Victoria,VIC,"(80, 89)",Female,1,Australia
+458,2020-10-07,Victoria,VIC,"(90, 99)",Male,1,Australia
+459,2020-10-11,Victoria,VIC,"(80, 89)",Female,1,Australia
+460,2020-10-13,Victoria,VIC,"(70, 79)",Male,1,Australia
+461,2020-10-14,Victoria,VIC,"(70, 79)",Female,1,Australia
+462,2020-10-14,Victoria,VIC,"(80, 89)",Male,2,Australia
+463,2020-10-14,Victoria,VIC,"(90, 99)",Female,2,Australia
+464,2020-10-19,Victoria,VIC,"(90, 99)",Male,1,Australia
+465,2020-10-28,Victoria,VIC,"(70, 79)",Male,1,Australia
+466,2020-10-28,Victoria,VIC,"(80, 89)",Male,1,Australia
+467,2020-11-30,Victoria,VIC,"(70, 79)",Female,1,Australia
+468,2020-12-28,New South Wales,NSW,"(70, 79)",Male,1,Australia
+469,2021-04-13,Queensland,QLD,"(80, 89)",Male,1,Australia
+470,2021-07-11,New South Wales,NSW,"(90, 99)",Female,1,Australia
+471,2021-07-13,New South Wales,NSW,"(70, 79)",Male,1,Australia
+472,2021-07-17,New South Wales,NSW,"(80, 89)",Male,1,Australia
+473,2021-07-18,New South Wales,NSW,"(90, 99)",Female,1,Australia
+474,2021-07-19,New South Wales,NSW,"(50, 59)",Female,1,Australia
+475,2021-07-23,New South Wales,NSW,"(80, 89)",Male,1,Australia
+476,2021-07-26,New South Wales,NSW,"(30, 39)",Female,1,Australia
+477,2021-07-26,New South Wales,NSW,"(70, 79)",Female,1,Australia
+478,2021-07-27,New South Wales,NSW,"(80, 89)",Female,1,Australia
+479,2021-07-27,New South Wales,NSW,"(80, 89)",Male,1,Australia
+480,2021-07-28,New South Wales,NSW,"(90, 99)",Female,1,Australia
+481,2021-07-29,New South Wales,NSW,"(80, 89)",Male,1,Australia
+482,2021-07-29,New South Wales,NSW,"(90, 99)",Female,1,Australia
+483,2021-07-31,New South Wales,NSW,"(60, 69)",Male,1,Australia
+484,2021-08-02,New South Wales,NSW,"(90, 99)",Male,1,Australia
+485,2021-08-04,New South Wales,NSW,"(20, 29)",Male,1,Australia
+486,2021-08-04,New South Wales,NSW,"(80, 89)",Female,1,Australia
+487,2021-08-05,New South Wales,NSW,"(60, 69)",Male,3,Australia
+488,2021-08-05,New South Wales,NSW,"(70, 79)",Male,1,Australia
+489,2021-08-05,New South Wales,NSW,"(80, 89)",Female,1,Australia
+490,2021-08-06,New South Wales,NSW,"(60, 69)",Female,1,Australia
+491,2021-08-07,New South Wales,NSW,"(60, 69)",Male,1,Australia
+492,2021-08-07,New South Wales,NSW,"(80, 89)",Female,1,Australia
+493,2021-08-07,New South Wales,NSW,"(80, 89)",Male,2,Australia
+494,2021-08-07,New South Wales,NSW,"(90, 99)",Male,1,Australia
+495,2021-08-08,New South Wales,NSW,"(80, 89)",Female,1,Australia
+496,2021-08-10,New South Wales,NSW,"(70, 79)",Male,1,Australia
+497,2021-08-10,New South Wales,NSW,"(80, 89)",Female,1,Australia
+498,2021-08-10,New South Wales,NSW,"(80, 89)",Male,2,Australia
+499,2021-08-11,New South Wales,NSW,"(30, 39)",Male,1,Australia
+500,2021-08-11,New South Wales,NSW,"(90, 99)",Male,1,Australia
+501,2021-08-12,New South Wales,NSW,"(90, 99)",Male,2,Australia
+502,2021-08-13,New South Wales,NSW,"(40, 49)",Female,1,Australia
+503,2021-08-13,New South Wales,NSW,"(90, 99)",Male,1,Australia
+504,2021-08-14,New South Wales,NSW,"(40, 49)",Female,1,Australia
+505,2021-08-14,New South Wales,NSW,"(70, 79)",Female,1,Australia
+506,2021-08-14,New South Wales,NSW,"(70, 79)",Male,1,Australia
+507,2021-08-14,New South Wales,NSW,"(80, 89)",Male,1,Australia
+508,2021-08-15,New South Wales,NSW,"(50, 59)",Female,1,Australia
+509,2021-08-15,New South Wales,NSW,"(70, 79)",Female,1,Australia
+510,2021-08-15,New South Wales,NSW,"(80, 89)",Female,1,Australia
+511,2021-08-15,New South Wales,NSW,"(80, 89)",Male,1,Australia
+512,2021-08-16,New South Wales,NSW,"(10, 19)",Male,1,Australia
+513,2021-08-16,New South Wales,NSW,"(40, 49)",Male,1,Australia
+514,2021-08-16,New South Wales,NSW,"(70, 79)",Female,1,Australia
+515,2021-08-16,New South Wales,NSW,"(70, 79)",Male,1,Australia
+516,2021-08-16,New South Wales,NSW,"(80, 89)",Female,1,Australia
+517,2021-08-16,New South Wales,NSW,"(80, 89)",Male,3,Australia
+518,2021-08-17,New South Wales,NSW,"(70, 79)",Female,1,Australia
+519,2021-08-18,New South Wales,NSW,"(60, 69)",Male,1,Australia
+520,2021-08-18,New South Wales,NSW,"(70, 79)",Male,2,Australia
+521,2021-08-19,New South Wales,NSW,"(80, 89)",Male,1,Australia
+522,2021-08-20,New South Wales,NSW,"(70, 79)",Male,1,Australia
+523,2021-08-20,New South Wales,NSW,"(80, 89)",Female,2,Australia
+524,2021-08-20,New South Wales,NSW,"(80, 89)",Male,1,Australia
+525,2021-08-21,New South Wales,NSW,"(80, 89)",Male,1,Australia
+526,2021-08-21,New South Wales,NSW,"(90, 99)",Female,1,Australia
+527,2021-08-21,New South Wales,NSW,"(90, 99)",Male,1,Australia
+528,2021-08-22,New South Wales,NSW,"(60, 69)",Male,1,Australia
+529,2021-08-22,New South Wales,NSW,"(70, 79)",Male,1,Australia
+530,2021-08-22,New South Wales,NSW,"(80, 89)",Female,1,Australia
+531,2021-08-23,New South Wales,NSW,"(80, 89)",Female,1,Australia
+532,2021-08-23,New South Wales,NSW,"(80, 89)",Male,2,Australia
+533,2021-08-25,New South Wales,NSW,"(30, 39)",Female,1,Australia
+534,2021-08-25,New South Wales,NSW,"(80, 89)",Male,1,Australia
+535,2021-08-26,New South Wales,NSW,"(30, 39)",Male,1,Australia
+536,2021-08-26,New South Wales,NSW,"(60, 69)",Male,1,Australia
+537,2021-08-26,New South Wales,NSW,"(80, 89)",Male,1,Australia
+538,2021-08-27,New South Wales,NSW,"(60, 69)",Male,1,Australia
+539,2021-08-27,New South Wales,NSW,"(80, 89)",Male,1,Australia
+540,2021-08-28,New South Wales,NSW,"(70, 79)",Female,1,Australia
+541,2021-08-28,New South Wales,NSW,"(80, 89)",Female,1,Australia
+542,2021-08-29,New South Wales,NSW,"(70, 79)",Male,3,Australia
+543,2021-08-29,New South Wales,NSW,"(80, 89)",Female,1,Australia
+544,2021-08-29,New South Wales,NSW,"(80, 89)",Male,2,Australia
+545,2021-08-30,New South Wales,NSW,"(50, 59)",Male,1,Australia
+546,2021-08-30,New South Wales,NSW,"(60, 69)",Female,1,Australia
+547,2021-08-30,New South Wales,NSW,"(70, 79)",Male,2,Australia
+548,2021-08-31,New South Wales,NSW,"(50, 59)",Female,1,Australia
+549,2021-08-31,New South Wales,NSW,"(80, 89)",Male,1,Australia
+550,2021-08-31,New South Wales,NSW,"(90, 99)",Male,1,Australia
+551,2021-09-01,New South Wales,NSW,"(50, 59)",Female,1,Australia
+552,2021-09-01,New South Wales,NSW,"(60, 69)",Female,1,Australia
+553,2021-09-01,New South Wales,NSW,"(70, 79)",Female,1,Australia
+554,2021-09-01,New South Wales,NSW,"(80, 89)",Female,1,Australia
+555,2021-09-01,Victoria,VIC,"(40, 49)",Female,1,Australia
+556,2021-09-01,Victoria,VIC,"(60, 69)",Female,1,Australia
+557,2021-09-02,New South Wales,NSW,"(50, 59)",Male,1,Australia
+558,2021-09-02,New South Wales,NSW,"(70, 79)",Female,1,Australia
+559,2021-09-02,New South Wales,NSW,"(70, 79)",Male,1,Australia
+560,2021-09-02,New South Wales,NSW,"(80, 89)",Female,1,Australia
+561,2021-09-02,New South Wales,NSW,"(80, 89)",Male,3,Australia
+562,2021-09-03,New South Wales,NSW,"(30, 39)",Female,1,Australia
+563,2021-09-03,New South Wales,NSW,"(60, 69)",Female,1,Australia
+564,2021-09-03,New South Wales,NSW,"(70, 79)",Female,3,Australia
+565,2021-09-03,New South Wales,NSW,"(70, 79)",Male,4,Australia
+566,2021-09-03,New South Wales,NSW,"(80, 89)",Female,1,Australia
+567,2021-09-03,New South Wales,NSW,"(80, 89)",Male,1,Australia
+568,2021-09-03,New South Wales,NSW,"(90, 99)",Male,1,Australia
+569,2021-09-03,Victoria,VIC,"(60, 69)",Male,1,Australia
+570,2021-09-04,New South Wales,NSW,"(50, 59)",Male,1,Australia
+571,2021-09-04,New South Wales,NSW,"(60, 69)",Male,1,Australia
+572,2021-09-04,New South Wales,NSW,"(70, 79)",Male,1,Australia
+573,2021-09-04,New South Wales,NSW,"(80, 89)",Female,1,Australia
+574,2021-09-05,New South Wales,NSW,"(50, 59)",Female,1,Australia
+575,2021-09-05,New South Wales,NSW,"(70, 79)",Female,1,Australia
+576,2021-09-05,New South Wales,NSW,"(70, 79)",Male,1,Australia
+577,2021-09-06,New South Wales,NSW,"(50, 59)",Female,1,Australia
+578,2021-09-06,New South Wales,NSW,"(60, 69)",Male,1,Australia
+579,2021-09-06,New South Wales,NSW,"(80, 89)",Female,2,Australia
+580,2021-09-06,New South Wales,NSW,"(90, 99)",Male,1,Australia
+581,2021-09-07,New South Wales,NSW,"(50, 59)",Male,1,Australia
+582,2021-09-07,New South Wales,NSW,"(60, 69)",Male,1,Australia
+583,2021-09-07,New South Wales,NSW,"(70, 79)",Female,2,Australia
+584,2021-09-07,New South Wales,NSW,"(70, 79)",Male,1,Australia
+585,2021-09-07,New South Wales,NSW,"(80, 89)",Male,1,Australia
+586,2021-09-07,New South Wales,NSW,"(90, 99)",Male,2,Australia
+587,2021-09-08,New South Wales,NSW,"(20, 29)",Male,1,Australia
+588,2021-09-08,New South Wales,NSW,"(40, 49)",Male,1,Australia
+589,2021-09-08,New South Wales,NSW,"(60, 69)",Female,1,Australia
+590,2021-09-08,New South Wales,NSW,"(60, 69)",Male,1,Australia
+591,2021-09-08,New South Wales,NSW,"(70, 79)",Male,2,Australia
+592,2021-09-08,New South Wales,NSW,"(80, 89)",Male,2,Australia
+593,2021-09-08,New South Wales,NSW,"(90, 99)",Male,1,Australia
+594,2021-09-09,New South Wales,NSW,"(40, 49)",Female,1,Australia
+595,2021-09-09,New South Wales,NSW,"(70, 79)",Female,2,Australia
+596,2021-09-09,New South Wales,NSW,"(80, 89)",Male,2,Australia
+597,2021-09-10,New South Wales,NSW,"(30, 39)",Male,1,Australia
+598,2021-09-10,New South Wales,NSW,"(40, 49)",Female,1,Australia
+599,2021-09-10,New South Wales,NSW,"(50, 59)",Female,1,Australia
+600,2021-09-10,New South Wales,NSW,"(50, 59)",Male,1,Australia
+601,2021-09-10,New South Wales,NSW,"(60, 69)",Male,2,Australia
+602,2021-09-10,New South Wales,NSW,"(70, 79)",Male,2,Australia
+603,2021-09-10,New South Wales,NSW,"(80, 89)",Female,1,Australia
+604,2021-09-10,Victoria,VIC,"(70, 79)",Male,1,Australia
+605,2021-09-11,New South Wales,NSW,"(30, 39)",Male,1,Australia
+606,2021-09-11,New South Wales,NSW,"(40, 49)",Male,1,Australia
+607,2021-09-11,New South Wales,NSW,"(50, 59)",Male,1,Australia
+608,2021-09-11,New South Wales,NSW,"(70, 79)",Male,2,Australia
+609,2021-09-11,New South Wales,NSW,"(80, 89)",Female,2,Australia
+610,2021-09-11,New South Wales,NSW,"(80, 89)",Male,1,Australia
+611,2021-09-12,New South Wales,NSW,"(20, 29)",Male,1,Australia
+612,2021-09-12,New South Wales,NSW,"(40, 49)",Female,1,Australia
+613,2021-09-12,New South Wales,NSW,"(50, 59)",Female,1,Australia
+614,2021-09-12,New South Wales,NSW,"(50, 59)",Male,1,Australia
+615,2021-09-12,New South Wales,NSW,"(70, 79)",Male,1,Australia
+616,2021-09-12,New South Wales,NSW,"(80, 89)",Female,1,Australia
+617,2021-09-12,New South Wales,NSW,"(80, 89)",Male,1,Australia
+618,2021-09-13,New South Wales,NSW,"(60, 69)",Female,1,Australia
+619,2021-09-13,New South Wales,NSW,"(80, 89)",Male,3,Australia
+620,2021-09-13,New South Wales,NSW,"(90, 99)",Female,1,Australia
+621,2021-09-13,New South Wales,NSW,"(90, 99)",Male,2,Australia
+622,2021-09-14,New South Wales,NSW,"(50, 59)",Male,1,Australia
+623,2021-09-14,New South Wales,NSW,"(80, 89)",Female,1,Australia
+624,2021-09-14,Victoria,VIC,"(20, 29)",Male,1,Australia
+625,2021-09-14,Victoria,VIC,"(80, 89)",Female,1,Australia
+626,2021-09-15,New South Wales,NSW,"(30, 39)",Female,1,Australia
+627,2021-09-15,New South Wales,NSW,"(50, 59)",Female,1,Australia
+628,2021-09-15,New South Wales,NSW,"(60, 69)",Female,1,Australia
+629,2021-09-15,New South Wales,NSW,"(60, 69)",Male,3,Australia
+630,2021-09-15,New South Wales,NSW,"(70, 79)",Female,2,Australia
+631,2021-09-15,New South Wales,NSW,"(70, 79)",Male,1,Australia
+632,2021-09-15,New South Wales,NSW,"(80, 89)",Female,1,Australia
+633,2021-09-15,New South Wales,NSW,"(80, 89)",Male,1,Australia
+634,2021-09-15,New South Wales,NSW,"(90, 99)",Male,1,Australia
+635,2021-09-15,Victoria,VIC,"(40, 49)",Male,1,Australia
+636,2021-09-15,Victoria,VIC,"(70, 79)",Male,1,Australia
+637,2021-09-16,New South Wales,NSW,"(40, 49)",Male,1,Australia
+638,2021-09-16,New South Wales,NSW,"(50, 59)",Male,1,Australia
+639,2021-09-16,New South Wales,NSW,"(60, 69)",Female,2,Australia
+640,2021-09-16,New South Wales,NSW,"(60, 69)",Male,2,Australia
+641,2021-09-16,New South Wales,NSW,"(70, 79)",Female,1,Australia
+642,2021-09-16,New South Wales,NSW,"(70, 79)",Male,1,Australia
+643,2021-09-16,New South Wales,NSW,"(80, 89)",Female,3,Australia
+644,2021-09-16,New South Wales,NSW,"(90, 99)",Male,1,Australia
+645,2021-09-17,New South Wales,NSW,"(20, 29)",Female,2,Australia
+646,2021-09-17,New South Wales,NSW,"(50, 59)",Male,3,Australia
+647,2021-09-17,New South Wales,NSW,"(60, 69)",Male,1,Australia
+648,2021-09-17,New South Wales,NSW,"(70, 79)",Female,1,Australia
+649,2021-09-17,New South Wales,NSW,"(70, 79)",Male,1,Australia
+650,2021-09-17,New South Wales,NSW,"(80, 89)",Female,2,Australia
+651,2021-09-17,New South Wales,NSW,"(80, 89)",Male,1,Australia
+652,2021-09-17,New South Wales,NSW,"(90, 99)",Female,1,Australia
+653,2021-09-17,Victoria,VIC,"(50, 59)",Female,1,Australia
+654,2021-09-18,New South Wales,NSW,"(40, 49)",Female,1,Australia
+655,2021-09-18,New South Wales,NSW,"(60, 69)",Female,1,Australia
+656,2021-09-18,New South Wales,NSW,"(70, 79)",Female,2,Australia
+657,2021-09-18,New South Wales,NSW,"(80, 89)",Male,2,Australia
+658,2021-09-18,Victoria,VIC,"(70, 79)",Female,1,Australia
+659,2021-09-19,New South Wales,NSW,"(40, 49)",Male,1,Australia
+660,2021-09-19,New South Wales,NSW,"(50, 59)",Female,1,Australia
+661,2021-09-19,New South Wales,NSW,"(50, 59)",Male,1,Australia
+662,2021-09-19,New South Wales,NSW,"(60, 69)",Female,1,Australia
+663,2021-09-19,New South Wales,NSW,"(60, 69)",Male,1,Australia
+664,2021-09-19,New South Wales,NSW,"(70, 79)",Female,2,Australia
+665,2021-09-19,New South Wales,NSW,"(70, 79)",Male,4,Australia
+666,2021-09-19,New South Wales,NSW,"(80, 89)",Male,2,Australia
+667,2021-09-19,Victoria,VIC,"(90, 99)",Male,1,Australia
+668,2021-09-20,New South Wales,NSW,"(60, 69)",Male,2,Australia
+669,2021-09-20,New South Wales,NSW,"(80, 89)",Female,1,Australia
+670,2021-09-20,New South Wales,NSW,"(80, 89)",Male,1,Australia
+671,2021-09-20,Victoria,VIC,"(70, 79)",Female,1,Australia
+672,2021-09-21,New South Wales,NSW,"(50, 59)",Male,1,Australia
+673,2021-09-21,New South Wales,NSW,"(60, 69)",Male,1,Australia
+674,2021-09-21,New South Wales,NSW,"(70, 79)",Male,1,Australia
+675,2021-09-21,New South Wales,NSW,"(80, 89)",Female,1,Australia
+676,2021-09-21,New South Wales,NSW,"(80, 89)",Male,5,Australia
+677,2021-09-21,New South Wales,NSW,"(90, 99)",Female,1,Australia
+678,2021-09-21,Victoria,VIC,"(70, 79)",Female,1,Australia
+679,2021-09-22,New South Wales,NSW,"(50, 59)",Female,2,Australia
+680,2021-09-22,New South Wales,NSW,"(60, 69)",Female,1,Australia
+681,2021-09-22,New South Wales,NSW,"(70, 79)",Male,1,Australia
+682,2021-09-22,New South Wales,NSW,"(80, 89)",Female,1,Australia
+683,2021-09-22,Victoria,VIC,"(50, 59)",Female,1,Australia
+684,2021-09-22,Victoria,VIC,"(70, 79)",Male,1,Australia
+685,2021-09-22,Victoria,VIC,"(80, 89)",Male,1,Australia
+686,2021-09-23,New South Wales,NSW,"(50, 59)",Female,1,Australia
+687,2021-09-23,New South Wales,NSW,"(90, 99)",Female,1,Australia
+688,2021-09-23,Victoria,VIC,"(70, 79)",Male,1,Australia
+689,2021-09-23,Victoria,VIC,"(80, 89)",Male,2,Australia
+690,2021-09-23,Victoria,VIC,"(90, 99)",Female,1,Australia
+691,2021-09-24,New South Wales,NSW,"(40, 49)",Male,1,Australia
+692,2021-09-24,New South Wales,NSW,"(50, 59)",Male*,2,Australia
+693,2021-09-24,New South Wales,NSW,"(60, 69)",Male*,1,Australia
+694,2021-09-24,New South Wales,NSW,"(80, 89)",Female,1,Australia
+695,2021-09-24,New South Wales,NSW,"(80, 89)",Female*,3,Australia
+696,2021-09-24,New South Wales,NSW,"(80, 89)",Male*,2,Australia
+697,2021-09-24,New South Wales,NSW,"(90, 99)",Female*,1,Australia
+698,2021-09-24,Victoria,VIC,"(80, 89)",Female,1,Australia
+699,2021-09-25,New South Wales,NSW,"(40, 49)",Male,1,Australia
+700,2021-09-25,New South Wales,NSW,"(50, 59)",Male,1,Australia
+701,2021-09-25,New South Wales,NSW,"(60, 69)",Male,2,Australia
+702,2021-09-25,New South Wales,NSW,"(70, 79)",Male,3,Australia
+703,2021-09-25,New South Wales,NSW,"(80, 89)",Female,1,Australia
+704,2021-09-25,New South Wales,NSW,"(80, 89)",Male,2,Australia
+705,2021-09-25,New South Wales,NSW,"(90, 99)",Male,1,Australia
+706,2021-09-25,Victoria,VIC,"(80, 89)",Male,1,Australia
+707,2021-09-26,New South Wales,NSW,"(40, 49)",Male*,1,Australia
+708,2021-09-26,New South Wales,NSW,"(60, 69)",Male*,2,Australia
+709,2021-09-26,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+710,2021-09-26,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+711,2021-09-26,New South Wales,NSW,"(80, 89)",Female*,2,Australia
+712,2021-09-26,New South Wales,NSW,"(80, 89)",Male*,2,Australia
+713,2021-09-26,Victoria,VIC,"(70, 79)",Male,1,Australia
+714,2021-09-26,Victoria,VIC,"(80, 89)",Male,1,Australia
+715,2021-09-27,Australian Capital Territory,ACT,"(90, 99)",Male,1,Australia
+716,2021-09-27,New South Wales,NSW,"(60, 69)",Female*,2,Australia
+717,2021-09-27,New South Wales,NSW,"(60, 69)",Male*,2,Australia
+718,2021-09-27,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+719,2021-09-27,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+720,2021-09-27,New South Wales,NSW,"(80, 89)",Female*,2,Australia
+721,2021-09-27,New South Wales,NSW,"(80, 89)",Male*,2,Australia
+722,2021-09-27,New South Wales,NSW,"(90, 99)",Female*,1,Australia
+723,2021-09-27,New South Wales,NSW,"(90, 99)",Male*,1,Australia
+724,2021-09-27,Victoria,VIC,"(70, 79)",Male,1,Australia
+725,2021-09-28,New South Wales,NSW,"(40, 49)",Male,1,Australia
+726,2021-09-28,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+727,2021-09-28,New South Wales,NSW,"(70, 79)",Female,1,Australia
+728,2021-09-28,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+729,2021-09-28,New South Wales,NSW,"(80, 89)",Female*,2,Australia
+730,2021-09-28,New South Wales,NSW,"(90, 99)",Female,1,Australia
+731,2021-09-28,Victoria,VIC,"(50, 59)",Female,1,Australia
+732,2021-09-28,Victoria,VIC,"(70, 79)",Male,1,Australia
+733,2021-09-28,Victoria,VIC,"(80, 89)",Female,1,Australia
+734,2021-09-28,Victoria,VIC,"(80, 89)",Male,1,Australia
+735,2021-09-29,New South Wales,NSW,"(40, 49)",Male,2,Australia
+736,2021-09-29,New South Wales,NSW,"(50, 59)",Female*,1,Australia
+737,2021-09-29,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+738,2021-09-29,New South Wales,NSW,"(60, 69)",Female*,2,Australia
+739,2021-09-29,New South Wales,NSW,"(60, 69)",Male,1,Australia
+740,2021-09-29,New South Wales,NSW,"(60, 69)",Male*,1,Australia
+741,2021-09-29,New South Wales,NSW,"(70, 79)",Female,1,Australia
+742,2021-09-29,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+743,2021-09-29,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+744,2021-09-29,New South Wales,NSW,"(80, 89)",Male*,1,Australia
+745,2021-09-29,New South Wales,NSW,"(90, 99)",Female,1,Australia
+746,2021-09-29,New South Wales,NSW,"(90, 99)",Female*,1,Australia
+747,2021-09-29,New South Wales,NSW,"(90, 99)",Male*,1,Australia
+748,2021-09-29,Victoria,VIC,"(50, 59)",Female,1,Australia
+749,2021-09-29,Victoria,VIC,"(70, 79)",Female,1,Australia
+750,2021-09-29,Victoria,VIC,"(80, 89)",Female,3,Australia
+751,2021-09-29,Victoria,VIC,"(80, 89)",Male,1,Australia
+752,2021-09-29,Victoria,VIC,"(90, 99)",Female,1,Australia
+753,2021-09-30,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+754,2021-09-30,New South Wales,NSW,"(70, 79)",Male*,2,Australia
+755,2021-09-30,New South Wales,NSW,"(80, 89)",Female*,1,Australia
+756,2021-09-30,New South Wales,NSW,"(80, 89)",Male*,1,Australia
+757,2021-09-30,New South Wales,NSW,"(90, 99)",Male*,1,Australia
+758,2021-09-30,Victoria,VIC,"(60, 69)",Male,1,Australia
+759,2021-09-30,Victoria,VIC,"(70, 79)",Female,1,Australia
+760,2021-09-30,Victoria,VIC,"(70, 79)",Male,1,Australia
+761,2021-09-30,Victoria,VIC,"(80, 89)",Male,1,Australia
+762,2021-09-30,Victoria,VIC,"(90, 99)",Male,1,Australia
+763,2021-10-01,Australian Capital Territory,ACT,"(80, 89)",Female,1,Australia
+764,2021-10-01,Australian Capital Territory,ACT,"(80, 89)",Male,1,Australia
+765,2021-10-01,New South Wales,NSW,"(50, 59)",Female,1,Australia
+766,2021-10-01,New South Wales,NSW,"(50, 59)",Female*,1,Australia
+767,2021-10-01,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+768,2021-10-01,New South Wales,NSW,"(60, 69)",Female*,1,Australia
+769,2021-10-01,New South Wales,NSW,"(60, 69)",Male*,1,Australia
+770,2021-10-01,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+771,2021-10-01,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+772,2021-10-01,New South Wales,NSW,"(80, 89)",Female,2,Australia
+773,2021-10-01,New South Wales,NSW,"(80, 89)",Female*,1,Australia
+774,2021-10-01,New South Wales,NSW,"(80, 89)",Male,1,Australia
+775,2021-10-01,New South Wales,NSW,"(80, 89)",Male*,2,Australia
+776,2021-10-01,New South Wales,NSW,"(90, 99)",Female,1,Australia
+777,2021-10-01,New South Wales,NSW,"(90, 99)",Male*,1,Australia
+778,2021-10-01,Victoria,VIC,"(70, 79)",Female,1,Australia
+779,2021-10-01,Victoria,VIC,"(70, 79)",Male,1,Australia
+780,2021-10-01,Victoria,VIC,"(80, 89)",Male,1,Australia
+781,2021-10-02,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+782,2021-10-02,New South Wales,NSW,"(60, 69)",Female*,1,Australia
+783,2021-10-02,New South Wales,NSW,"(60, 69)",Male,2,Australia
+784,2021-10-02,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+785,2021-10-02,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+786,2021-10-02,New South Wales,NSW,"(80, 89)",Female*,1,Australia
+787,2021-10-02,New South Wales,NSW,"(80, 89)",Male,1,Australia
+788,2021-10-02,New South Wales,NSW,"(80, 89)",Male*,1,Australia
+789,2021-10-02,New South Wales,NSW,"(90, 99)",Female*,1,Australia
+790,2021-10-02,Victoria,VIC,"(60, 69)",Male,2,Australia
+791,2021-10-03,New South Wales,NSW,"(50, 59)",Female,1,Australia
+792,2021-10-03,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+793,2021-10-03,New South Wales,NSW,"(60, 69)",Female,1,Australia
+794,2021-10-03,New South Wales,NSW,"(60, 69)",Female*,2,Australia
+795,2021-10-03,New South Wales,NSW,"(60, 69)",Male,1,Australia
+796,2021-10-03,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+797,2021-10-03,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+798,2021-10-03,New South Wales,NSW,"(80, 89)",Female,1,Australia
+799,2021-10-03,New South Wales,NSW,"(80, 89)",Male,1,Australia
+800,2021-10-03,Victoria,VIC,"(50, 59)",Male,1,Australia
+801,2021-10-03,Victoria,VIC,"(70, 79)",Female,1,Australia
+802,2021-10-03,Victoria,VIC,"(80, 89)",Male,1,Australia
+803,2021-10-04,New South Wales,NSW,"(40, 49)",Female*,1,Australia
+804,2021-10-04,New South Wales,NSW,"(60, 69)",Female*,1,Australia
+805,2021-10-04,New South Wales,NSW,"(60, 69)",Male,1,Australia
+806,2021-10-04,New South Wales,NSW,"(60, 69)",Male*,1,Australia
+807,2021-10-04,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+808,2021-10-04,New South Wales,NSW,"(90, 99)",Female,1,Australia
+809,2021-10-04,Victoria,VIC,"(60, 69)",Female,1,Australia
+810,2021-10-04,Victoria,VIC,"(60, 69)",Male,1,Australia
+811,2021-10-04,Victoria,VIC,"(70, 79)",Female,1,Australia
+812,2021-10-04,Victoria,VIC,"(80, 89)",Male,1,Australia
+813,2021-10-05,Australian Capital Territory,ACT,"(80, 89)",Female,2,Australia
+814,2021-10-05,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+815,2021-10-05,New South Wales,NSW,"(60, 69)",Male*,2,Australia
+816,2021-10-05,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+817,2021-10-05,New South Wales,NSW,"(70, 79)",Male*,2,Australia
+818,2021-10-05,New South Wales,NSW,"(80, 89)",Male*,1,Australia
+819,2021-10-05,Victoria,VIC,"(60, 69)",Female,1,Australia
+820,2021-10-05,Victoria,VIC,"(60, 69)",Male,1,Australia
+821,2021-10-05,Victoria,VIC,"(70, 79)",Female,1,Australia
+822,2021-10-05,Victoria,VIC,"(80, 89)",Male,1,Australia
+823,2021-10-06,Australian Capital Territory,ACT,"(70, 79)",Female,1,Australia
+824,2021-10-06,New South Wales,NSW,"(40, 49)",Male*,1,Australia
+825,2021-10-06,New South Wales,NSW,"(60, 69)",Male,1,Australia
+826,2021-10-06,New South Wales,NSW,"(70, 79)",Female,1,Australia
+827,2021-10-06,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+828,2021-10-06,New South Wales,NSW,"(70, 79)",Male,1,Australia
+829,2021-10-06,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+830,2021-10-06,New South Wales,NSW,"(80, 89)",Male,2,Australia
+831,2021-10-06,New South Wales,NSW,"(90, 99)",Female*,1,Australia
+832,2021-10-06,New South Wales,NSW,"(90, 99)",Male*,1,Australia
+833,2021-10-06,Victoria,VIC,"(50, 59)",Male,1,Australia
+834,2021-10-06,Victoria,VIC,"(60, 69)",Female,1,Australia
+835,2021-10-06,Victoria,VIC,"(70, 79)",Female,3,Australia
+836,2021-10-06,Victoria,VIC,"(70, 79)",Male,3,Australia
+837,2021-10-06,Victoria,VIC,"(80, 89)",Male,1,Australia
+838,2021-10-06,Victoria,VIC,"(90, 99)",Female,2,Australia
+839,2021-10-07,New South Wales,NSW,"(20, 29)",Male,1,Australia
+840,2021-10-07,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+841,2021-10-07,New South Wales,NSW,"(60, 69)",Female*,1,Australia
+842,2021-10-07,New South Wales,NSW,"(60, 69)",Male*,1,Australia
+843,2021-10-07,New South Wales,NSW,"(70, 79)",Female,1,Australia
+844,2021-10-07,New South Wales,NSW,"(70, 79)",Male,1,Australia
+845,2021-10-07,New South Wales,NSW,"(80, 89)",Female*,1,Australia
+846,2021-10-07,New South Wales,NSW,"(80, 89)",Male*,1,Australia
+847,2021-10-07,Victoria,VIC,"(60, 69)",Female,1,Australia
+848,2021-10-07,Victoria,VIC,"(70, 79)",Female,1,Australia
+849,2021-10-08,New South Wales,NSW,"(50, 59)",Male*,2,Australia
+850,2021-10-08,New South Wales,NSW,"(60, 69)",Male*,1,Australia
+851,2021-10-08,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+852,2021-10-08,New South Wales,NSW,"(70, 79)",Male*,3,Australia
+853,2021-10-08,New South Wales,NSW,"(80, 89)",Female*,1,Australia
+854,2021-10-08,New South Wales,NSW,"(80, 89)",Male*,3,Australia
+855,2021-10-08,Victoria,VIC,"(70, 79)",Female,2,Australia
+856,2021-10-08,Victoria,VIC,"(70, 79)",Male,1,Australia
+857,2021-10-08,Victoria,VIC,"(80, 89)",Male,2,Australia
+858,2021-10-09,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+859,2021-10-09,New South Wales,NSW,"(60, 69)",Male*,1,Australia
+860,2021-10-09,New South Wales,NSW,"(70, 79)",Male*,4,Australia
+861,2021-10-09,New South Wales,NSW,"(80, 89)",Female,2,Australia
+862,2021-10-09,New South Wales,NSW,"(90, 99)",Female*,1,Australia
+863,2021-10-09,New South Wales,NSW,"(90, 99)",Male*,2,Australia
+864,2021-10-09,Victoria,VIC,"(50, 59)",Male,2,Australia
+865,2021-10-09,Victoria,VIC,"(60, 69)",Male,1,Australia
+866,2021-10-09,Victoria,VIC,"(70, 79)",Male,1,Australia
+867,2021-10-09,Victoria,VIC,"(90, 99)",Female,1,Australia
+868,2021-10-10,New South Wales,NSW,"(50, 59)",Male,2,Australia
+869,2021-10-10,New South Wales,NSW,"(60, 69)",Male,1,Australia
+870,2021-10-10,New South Wales,NSW,"(70, 79)",Male,3,Australia
+871,2021-10-10,Victoria,VIC,"(50, 59)",Male,2,Australia
+872,2021-10-10,Victoria,VIC,"(70, 79)",Male,2,Australia
+873,2021-10-10,Victoria,VIC,"(80, 89)",Female,1,Australia
+874,2021-10-11,New South Wales,NSW,"(40, 49)",Male*,1,Australia
+875,2021-10-11,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+876,2021-10-11,New South Wales,NSW,"(60, 69)",Female*,1,Australia
+877,2021-10-11,New South Wales,NSW,"(60, 69)",Male*,2,Australia
+878,2021-10-11,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+879,2021-10-11,New South Wales,NSW,"(80, 89)",Male*,1,Australia
+880,2021-10-11,New South Wales,NSW,"(90, 99)",Female,1,Australia
+881,2021-10-11,Victoria,VIC,"(40, 49)",Male,1,Australia
+882,2021-10-11,Victoria,VIC,"(70, 79)",Female,2,Australia
+883,2021-10-11,Victoria,VIC,"(70, 79)",Male,3,Australia
+884,2021-10-11,Victoria,VIC,"(80, 89)",Male,2,Australia
+885,2021-10-12,New South Wales,NSW,"(40, 49)",Male,1,Australia
+886,2021-10-12,New South Wales,NSW,"(50, 59)",Male,1,Australia
+887,2021-10-12,New South Wales,NSW,"(80, 89)",Female,1,Australia
+888,2021-10-12,New South Wales,NSW,"(80, 89)",Male,2,Australia
+889,2021-10-12,Victoria,VIC,"(40, 49)",Male,1,Australia
+890,2021-10-12,Victoria,VIC,"(50, 59)",Female,1,Australia
+891,2021-10-12,Victoria,VIC,"(70, 79)",Female,1,Australia
+892,2021-10-12,Victoria,VIC,"(70, 79)",Male,1,Australia
+893,2021-10-12,Victoria,VIC,"(80, 89)",Female,1,Australia
+894,2021-10-12,Victoria,VIC,"(80, 89)",Male,2,Australia
+895,2021-10-12,Victoria,VIC,"(90, 99)",Male,1,Australia
+896,2021-10-13,New South Wales,NSW,"(60, 69)",Male,1,Australia
+897,2021-10-13,New South Wales,NSW,"(70, 79)",Female,1,Australia
+898,2021-10-13,New South Wales,NSW,"(70, 79)",Male,2,Australia
+899,2021-10-13,Victoria,VIC,"(50, 59)",Male,1,Australia
+900,2021-10-13,Victoria,VIC,"(60, 69)",Female,1,Australia
+901,2021-10-13,Victoria,VIC,"(60, 69)",Male,2,Australia
+902,2021-10-13,Victoria,VIC,"(70, 79)",Female,1,Australia
+903,2021-10-13,Victoria,VIC,"(70, 79)",Male,3,Australia
+904,2021-10-13,Victoria,VIC,"(80, 89)",Female,1,Australia
+905,2021-10-13,Victoria,VIC,"(80, 89)",Male,3,Australia
+906,2021-10-13,Victoria,VIC,"(90, 99)",Female,1,Australia
+907,2021-10-14,Australian Capital Territory,ACT,"(80, 89)",Male,1,Australia
+908,2021-10-14,New South Wales,NSW,"(60, 69)",Female*,1,Australia
+909,2021-10-14,New South Wales,NSW,"(60, 69)",Male,1,Australia
+910,2021-10-14,New South Wales,NSW,"(80, 89)",Female*,1,Australia
+911,2021-10-14,New South Wales,NSW,"(80, 89)",Male*,1,Australia
+912,2021-10-14,New South Wales,NSW,"(90, 99)",Female*,1,Australia
+913,2021-10-14,New South Wales,NSW,"(90, 99)",Male,1,Australia
+914,2021-10-14,Victoria,VIC,"(50, 59)",Male,2,Australia
+915,2021-10-14,Victoria,VIC,"(60, 69)",Male,3,Australia
+916,2021-10-14,Victoria,VIC,"(70, 79)",Female,1,Australia
+917,2021-10-14,Victoria,VIC,"(70, 79)",Male,3,Australia
+918,2021-10-14,Victoria,VIC,"(80, 89)",Female,1,Australia
+919,2021-10-14,Victoria,VIC,"(80, 89)",Male,1,Australia
+920,2021-10-15,Australian Capital Territory,ACT,"(70, 79)",Female,1,Australia
+921,2021-10-15,New South Wales,NSW,"(50, 59)",Male,1,Australia
+922,2021-10-15,New South Wales,NSW,"(70, 79)",Male,1,Australia
+923,2021-10-15,New South Wales,NSW,"(80, 89)",Female,2,Australia
+924,2021-10-15,Victoria,VIC,"(50, 59)",Female,1,Australia
+925,2021-10-15,Victoria,VIC,"(80, 89)",Female,2,Australia
+926,2021-10-15,Victoria,VIC,"(80, 89)",Male,3,Australia
+927,2021-10-16,New South Wales,NSW,"(60, 69)",Male,1,Australia
+928,2021-10-16,New South Wales,NSW,"(90, 99)",Female,1,Australia
+929,2021-10-16,Victoria,VIC,"(10, 19)",Female,1,Australia
+930,2021-10-16,Victoria,VIC,"(50, 59)",Male,1,Australia
+931,2021-10-16,Victoria,VIC,"(60, 69)",Female,2,Australia
+932,2021-10-16,Victoria,VIC,"(70, 79)",Male,1,Australia
+933,2021-10-16,Victoria,VIC,"(80, 89)",Male,2,Australia
+934,2021-10-17,New South Wales,NSW,"(50, 59)",Female*,1,Australia
+935,2021-10-17,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+936,2021-10-17,New South Wales,NSW,"(60, 69)",Female*,1,Australia
+937,2021-10-17,New South Wales,NSW,"(60, 69)",Male*,1,Australia
+938,2021-10-17,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+939,2021-10-17,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+940,2021-10-17,New South Wales,NSW,"(80, 89)",Female,1,Australia
+941,2021-10-17,New South Wales,NSW,"(80, 89)",Female*,1,Australia
+942,2021-10-17,New South Wales,NSW,"(80, 89)",Male,1,Australia
+943,2021-10-17,New South Wales,NSW,"(90, 99)",Male,1,Australia
+944,2021-10-17,Victoria,VIC,"(50, 59)",Male,1,Australia
+945,2021-10-17,Victoria,VIC,"(60, 69)",Female,1,Australia
+946,2021-10-17,Victoria,VIC,"(70, 79)",Male,1,Australia
+947,2021-10-17,Victoria,VIC,"(80, 89)",Female,1,Australia
+948,2021-10-17,Victoria,VIC,"(80, 89)",Male,3,Australia
+949,2021-10-18,New South Wales,NSW,"(30, 39)",Female,1,Australia
+950,2021-10-18,New South Wales,NSW,"(50, 59)",Male,1,Australia
+951,2021-10-18,New South Wales,NSW,"(60, 69)",Female,1,Australia
+952,2021-10-18,New South Wales,NSW,"(70, 79)",Female,1,Australia
+953,2021-10-18,New South Wales,NSW,"(80, 89)",Female,1,Australia
+954,2021-10-18,Victoria,VIC,"(50, 59)",Male,1,Australia
+955,2021-10-18,Victoria,VIC,"(60, 69)",Female,1,Australia
+956,2021-10-18,Victoria,VIC,"(70, 79)",Female,1,Australia
+957,2021-10-18,Victoria,VIC,"(70, 79)",Male,1,Australia
+958,2021-10-18,Victoria,VIC,"(80, 89)",Female,1,Australia
+959,2021-10-18,Victoria,VIC,"(90, 99)",Female,1,Australia
+960,2021-10-18,Victoria,VIC,"(90, 99)",Male,1,Australia
+961,2021-10-19,New South Wales,NSW,"(60, 69)",Female*,1,Australia
+962,2021-10-19,New South Wales,NSW,"(60, 69)",Male,2,Australia
+963,2021-10-19,New South Wales,NSW,"(80, 89)",Male*,1,Australia
+964,2021-10-19,Victoria,VIC,"(70, 79)",Female,2,Australia
+965,2021-10-19,Victoria,VIC,"(70, 79)",Male,2,Australia
+966,2021-10-19,Victoria,VIC,"(80, 89)",Male,4,Australia
+967,2021-10-19,Victoria,VIC,"(90, 99)",Male,2,Australia
+968,2021-10-19,Victoria,VIC,"(100, 109)",Male,1,Australia
+969,2021-10-20,New South Wales,NSW,"(40, 49)",Male,1,Australia
+970,2021-10-20,New South Wales,NSW,"(50, 59)",Male,1,Australia
+971,2021-10-20,New South Wales,NSW,"(70, 79)",Female,2,Australia
+972,2021-10-20,New South Wales,NSW,"(90, 99)",Male,3,Australia
+973,2021-10-21,New South Wales,NSW,"(50, 59)",Male,1,Australia
+974,2021-10-22,New South Wales,NSW,"(30, 39)",Male*,1,Australia
+975,2021-10-22,New South Wales,NSW,"(50, 59)",Female*,1,Australia
+976,2021-10-22,New South Wales,NSW,"(70, 79)",Male,1,Australia
+977,2021-10-22,New South Wales,NSW,"(80, 89)",Female*,1,Australia
+978,2021-10-22,New South Wales,NSW,"(90, 99)",Female,1,Australia
+979,2021-10-22,Victoria,VIC,"(60, 69)",Male,1,Australia
+980,2021-10-22,Victoria,VIC,"(70, 79)",Female,4,Australia
+981,2021-10-22,Victoria,VIC,"(80, 89)",Female,4,Australia
+982,2021-10-22,Victoria,VIC,"(80, 89)",Male,3,Australia
+983,2021-10-22,Victoria,VIC,"(90, 99)",Female,3,Australia
+984,2021-10-22,Victoria,VIC,"(90, 99)",Male,1,Australia
+985,2021-10-23,New South Wales,NSW,"(60, 69)",Male,1,Australia
+986,2021-10-23,New South Wales,NSW,"(70, 79)",Female,1,Australia
+987,2021-10-23,Victoria,VIC,"(60, 69)",Male,1,Australia
+988,2021-10-23,Victoria,VIC,"(70, 79)",Female,3,Australia
+989,2021-10-23,Victoria,VIC,"(70, 79)",Male,2,Australia
+990,2021-10-23,Victoria,VIC,"(80, 89)",Female,1,Australia
+991,2021-10-23,Victoria,VIC,"(90, 99)",Female,2,Australia
+992,2021-10-24,New South Wales,NSW,"(60, 69)",Male,2,Australia
+993,2021-10-24,New South Wales,NSW,"(70, 79)",Male,1,Australia
+994,2021-10-24,New South Wales,NSW,"(80, 89)",Male,1,Australia
+995,2021-10-24,Victoria,VIC,"(50, 59)",Unknown,1,Australia
+996,2021-10-24,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+997,2021-10-24,Victoria,VIC,"(70, 79)",Unknown,4,Australia
+998,2021-10-24,Victoria,VIC,"(80, 89)",Unknown,3,Australia
+999,2021-10-24,Victoria,VIC,"(90, 99)",Unknown,2,Australia
+1000,2021-10-25,New South Wales,NSW,"(40, 49)",Male*,1,Australia
+1001,2021-10-25,New South Wales,NSW,"(60, 69)",Female*,1,Australia
+1002,2021-10-25,New South Wales,NSW,"(60, 69)",Male,1,Australia
+1003,2021-10-25,New South Wales,NSW,"(70, 79)",Male*,1,Australia
+1004,2021-10-25,Victoria,VIC,"(20, 29)",Female,1,Australia
+1005,2021-10-25,Victoria,VIC,"(40, 49)",Unknown,1,Australia
+1006,2021-10-25,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1007,2021-10-25,Victoria,VIC,"(80, 89)",Unknown,3,Australia
+1008,2021-10-25,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1009,2021-10-26,New South Wales,NSW,"(80, 89)",Male,1,Australia
+1010,2021-10-26,Victoria,VIC,"(80, 89)",Unknown,4,Australia
+1011,2021-10-27,New South Wales,NSW,"(30, 39)",Male,1,Australia
+1012,2021-10-27,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+1013,2021-10-27,New South Wales,NSW,"(80, 89)",Male*,1,Australia
+1014,2021-10-27,Victoria,VIC,"(30, 39)",Unknown,1,Australia
+1015,2021-10-27,Victoria,VIC,"(40, 49)",Unknown,1,Australia
+1016,2021-10-27,Victoria,VIC,"(60, 69)",Unknown,5,Australia
+1017,2021-10-27,Victoria,VIC,"(80, 89)",Unknown,5,Australia
+1018,2021-10-27,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1019,2021-10-28,New South Wales,NSW,"(70, 79)",Male,1,Australia
+1020,2021-10-28,New South Wales,NSW,"(90, 99)",Female,1,Australia
+1021,2021-10-28,Victoria,VIC,"(40, 49)",Unknown,1,Australia
+1022,2021-10-28,Victoria,VIC,"(50, 59)",Unknown,2,Australia
+1023,2021-10-28,Victoria,VIC,"(60, 69)",Unknown,2,Australia
+1024,2021-10-28,Victoria,VIC,"(70, 79)",Unknown,6,Australia
+1025,2021-10-28,Victoria,VIC,"(80, 89)",Unknown,10,Australia
+1026,2021-10-28,Victoria,VIC,"(90, 99)",Unknown,4,Australia
+1027,2021-10-29,New South Wales,NSW,"(70, 79)",Male,1,Australia
+1028,2021-10-29,New South Wales,NSW,"(90, 99)",Female,1,Australia
+1029,2021-10-29,Victoria,VIC,"(40, 49)",Unknown,1,Australia
+1030,2021-10-29,Victoria,VIC,"(50, 59)",Unknown,1,Australia
+1031,2021-10-29,Victoria,VIC,"(60, 69)",Unknown,2,Australia
+1032,2021-10-29,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1033,2021-10-29,Victoria,VIC,"(90, 99)",Unknown,5,Australia
+1034,2021-10-30,New South Wales,NSW,"(40, 49)",Male,1,Australia
+1035,2021-10-30,New South Wales,NSW,"(60, 69)",Male,1,Australia
+1036,2021-10-30,New South Wales,NSW,"(80, 89)",Male,1,Australia
+1037,2021-10-30,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1038,2021-10-30,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1039,2021-10-30,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1040,2021-10-31,New South Wales,NSW,"(70, 79)",Female,1,Australia
+1041,2021-10-31,Victoria,VIC,"(50, 59)",Unknown,1,Australia
+1042,2021-10-31,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1043,2021-10-31,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1044,2021-10-31,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1045,2021-10-31,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1046,2021-11-01,Australian Capital Territory,ACT,"(60, 69)",Male,1,Australia
+1047,2021-11-01,Australian Capital Territory,ACT,"(70, 79)",Female,1,Australia
+1048,2021-11-01,New South Wales,NSW,"(60, 69)",Female,1,Australia
+1049,2021-11-01,New South Wales,NSW,"(60, 69)",Male,1,Australia
+1050,2021-11-01,New South Wales,NSW,"(70, 79)",Male,1,Australia
+1051,2021-11-01,New South Wales,NSW,"(100, 109)",Female,1,Australia
+1052,2021-11-01,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1053,2021-11-01,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1054,2021-11-01,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1055,2021-11-02,New South Wales,NSW,"(50, 59)",Male,2,Australia
+1056,2021-11-02,New South Wales,NSW,"(60, 69)",Male,1,Australia
+1057,2021-11-02,New South Wales,NSW,"(70, 79)",Male,1,Australia
+1058,2021-11-02,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1059,2021-11-02,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1060,2021-11-02,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1061,2021-11-02,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1062,2021-11-03,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+1063,2021-11-03,New South Wales,NSW,"(60, 69)",Male*,1,Australia
+1064,2021-11-03,New South Wales,NSW,"(70, 79)",Female*,1,Australia
+1065,2021-11-03,New South Wales,NSW,"(80, 89)",Female,1,Australia
+1066,2021-11-03,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1067,2021-11-03,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1068,2021-11-03,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1069,2021-11-03,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1070,2021-11-04,New South Wales,NSW,"(30, 39)",Female,1,Australia
+1071,2021-11-04,New South Wales,NSW,"(70, 79)",Male,1,Australia
+1072,2021-11-04,New South Wales,NSW,"(80, 89)",Male,2,Australia
+1073,2021-11-04,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1074,2021-11-04,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1075,2021-11-04,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1076,2021-11-05,Australian Capital Territory,ACT,"(40, 49)",Male,1,Australia
+1077,2021-11-05,New South Wales,NSW,"(80, 89)",Male,1,Australia
+1078,2021-11-05,Victoria,VIC,"(50, 59)",Unknown,1,Australia
+1079,2021-11-05,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1080,2021-11-05,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1081,2021-11-05,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1082,2021-11-06,New South Wales,NSW,"(30, 39)",Female,1,Australia
+1083,2021-11-06,New South Wales,NSW,"(50, 59)",Male,1,Australia
+1084,2021-11-06,New South Wales,NSW,"(60, 69)",Male,1,Australia
+1085,2021-11-06,Victoria,VIC,"(50, 59)",Unknown,1,Australia
+1086,2021-11-06,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1087,2021-11-06,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1088,2021-11-07,New South Wales,NSW,"(60, 69)",Male,1,Australia
+1089,2021-11-07,Victoria,VIC,"(30, 39)",Unknown,1,Australia
+1090,2021-11-07,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1091,2021-11-07,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1092,2021-11-07,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1093,2021-11-07,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1094,2021-11-08,New South Wales,NSW,"(80, 89)",Female,1,Australia
+1095,2021-11-08,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1096,2021-11-08,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1097,2021-11-08,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1098,2021-11-08,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1099,2021-11-09,New South Wales,NSW,"(50, 59)",Male*,1,Australia
+1100,2021-11-09,New South Wales,NSW,"(80, 89)",Female*,1,Australia
+1101,2021-11-09,New South Wales,NSW,"(80, 89)",Male*,1,Australia
+1102,2021-11-09,New South Wales,NSW,"(90, 99)",Female,1,Australia
+1103,2021-11-09,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1104,2021-11-09,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1105,2021-11-09,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1106,2021-11-09,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1107,2021-11-10,New South Wales,NSW,"(30, 39)",Male,1,Australia
+1108,2021-11-10,New South Wales,NSW,"(40, 49)",Male,1,Australia
+1109,2021-11-10,New South Wales,NSW,"(80, 89)",Male,1,Australia
+1110,2021-11-10,Victoria,VIC,"(50, 59)",Unknown,1,Australia
+1111,2021-11-10,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1112,2021-11-10,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1113,2021-11-10,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1114,2021-11-10,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1115,2021-11-11,New South Wales,NSW,"(60, 69)",Female,1,Australia
+1116,2021-11-11,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1117,2021-11-11,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1118,2021-11-11,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1119,2021-11-12,New South Wales,NSW,"(70, 79)",Female,1,Australia
+1120,2021-11-12,New South Wales,NSW,"(70, 79)",Male,1,Australia
+1121,2021-11-12,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1122,2021-11-12,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1123,2021-11-12,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1124,2021-11-12,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1125,2021-11-13,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1126,2021-11-13,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1127,2021-11-13,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1128,2021-11-14,New South Wales,NSW,"(80, 89)",Male,1,Australia
+1129,2021-11-14,Victoria,VIC,"(40, 49)",Unknown,1,Australia
+1130,2021-11-14,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1131,2021-11-14,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1132,2021-11-15,New South Wales,NSW,"(80, 89)",Female,1,Australia
+1133,2021-11-15,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1134,2021-11-15,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1135,2021-11-15,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1136,2021-11-16,New South Wales,NSW,"(70, 79)",Male,2,Australia
+1137,2021-11-16,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1138,2021-11-16,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1139,2021-11-16,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1140,2021-11-16,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1141,2021-11-17,Victoria,VIC,"(50, 59)",Unknown,1,Australia
+1142,2021-11-17,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1143,2021-11-17,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1144,2021-11-17,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1145,2021-11-17,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1146,2021-11-18,New South Wales,NSW,"(50, 59)",Male,1,Australia
+1147,2021-11-18,New South Wales,NSW,"(60, 69)",Male,1,Australia
+1148,2021-11-18,New South Wales,NSW,"(90, 99)",Female,1,Australia
+1149,2021-11-18,Victoria,VIC,"(40, 49)",Unknown,1,Australia
+1150,2021-11-18,Victoria,VIC,"(50, 59)",Unknown,1,Australia
+1151,2021-11-18,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1152,2021-11-18,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1153,2021-11-18,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1154,2021-11-19,New South Wales,NSW,"(50, 59)",Male,1,Australia
+1155,2021-11-19,New South Wales,NSW,"(60, 69)",Male,1,Australia
+1156,2021-11-19,New South Wales,NSW,"(80, 89)",Male,1,Australia
+1157,2021-11-19,Victoria,VIC,"(40, 49)",Unknown,1,Australia
+1158,2021-11-19,Victoria,VIC,"(50, 59)",Unknown,1,Australia
+1159,2021-11-19,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1160,2021-11-19,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1161,2021-11-19,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1162,2021-11-20,Victoria,VIC,"(0, 9)",Unknown,1,Australia
+1163,2021-11-20,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1164,2021-11-20,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1165,2021-11-21,New South Wales,NSW,"(40, 49)",Female,1,Australia
+1166,2021-11-21,New South Wales,NSW,"(80, 89)",Male,1,Australia
+1167,2021-11-21,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1168,2021-11-21,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1169,2021-11-21,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1170,2021-11-22,New South Wales,NSW,"(50, 59)",Female,1,Australia
+1171,2021-11-22,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1172,2021-11-22,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1173,2021-11-22,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1174,2021-11-23,New South Wales,NSW,"(80, 89)",Female,1,Australia
+1175,2021-11-23,New South Wales,NSW,"(80, 89)",Male,1,Australia
+1176,2021-11-23,Victoria,VIC,"(50, 59)",Unknown,1,Australia
+1177,2021-11-23,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1178,2021-11-23,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1179,2021-11-23,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1180,2021-11-23,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1181,2021-11-23,Victoria,VIC,"(100, 109)",Unknown,1,Australia
+1182,2021-11-24,New South Wales,NSW,"(60, 69)",Female,1,Australia
+1183,2021-11-24,New South Wales,NSW,"(80, 89)",Male,1,Australia
+1184,2021-11-24,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1185,2021-11-24,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1186,2021-11-24,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1187,2021-11-25,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1188,2021-11-25,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1189,2021-11-25,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1190,2021-11-25,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1191,2021-11-26,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1192,2021-11-26,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1193,2021-11-26,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1194,2021-11-27,Victoria,VIC,"(50, 59)",Unknown,1,Australia
+1195,2021-11-27,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1196,2021-11-27,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1197,2021-11-28,Victoria,VIC,"(60, 69)",Unknown,1,Australia
+1198,2021-11-28,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1199,2021-11-28,Victoria,VIC,"(90, 99)",Unknown,1,Australia
+1200,2021-11-29,Victoria,VIC,"(70, 79)",Unknown,1,Australia
+1201,2021-11-29,Victoria,VIC,"(80, 89)",Unknown,1,Australia
+1202,2021-12-03,Northern Territory,NT,"(70, 79)",Female,1,Australia
+1203,2021-12-08,Australian Capital Territory,ACT,"(80, 89)",Male,1,Australia
