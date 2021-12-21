@@ -96,3 +96,14 @@ The following data sources were found, covering the above measures:
 The data is sunk to a csv using the [sink.py](herd/ingestion/sink.py) script which retrieves and processes all the datasets and merges them into a single dataset which overlapping dimensions.
 
 This csv is updated (from the full dataset) daily using a cronjob and the changes are committed to the GitHub repository (TODO).
+
+## Development
+
+Install dependencies (within the ingestion folder):
+```sh
+$ python3.8 -m virtualenv venv
+$ . venv/bin/activate
+$ pip install -r requirements.txt
+```
+
+To add a new data source, extend the ingestion Source base class within a script in the sources folder. Incorporate Source engine into the sink.py script as desired.
