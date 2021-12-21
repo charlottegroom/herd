@@ -8,6 +8,8 @@ from sources.covid19data import COVIDAUSource
 
 from ingestion import Sink
 
+FILEPATH = 'ingestion/data/{name}'
+
 def retrieve_and_merge_datasets(engines, dimensions, measures):
     '''Retrieve and merge datasets.
 
@@ -21,7 +23,7 @@ def retrieve_and_merge_datasets(engines, dimensions, measures):
     for key, engine in engines.items():
         docs = engine.process()
         # Sink individual dataset
-        sink.save(docs, name=key)
+        sink.save(docs, name=FILEPATH.format(name=key))
         # Append dataset
         datasets.append(pd.DataFrame(docs))
     # Merge datasets
@@ -101,7 +103,7 @@ docs = retrieve_and_merge_datasets(
     STATE_MEASURES
 )
 
-sink.save(docs, name='states')
+sink.save(docs, name=FILEPATH.format(name='states'))
 
 # ------------------------------------------------------------------ #
 # --------------------------- State Data --------------------------- #
@@ -144,4 +146,4 @@ docs = retrieve_and_merge_datasets(
     LGA_DIMENSIONS,
     LGA_MEASURES,
 )
-sink.save(docs, name='lga')
+sink.save(docs, FILEPATH.format(name='lga'))
