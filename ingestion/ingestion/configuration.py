@@ -1,6 +1,6 @@
 '''Configuration Schema Validation'''
 
-from marshmallow import Schema, pre_load, validate
+from marshmallow import Schema, post_load, validate
 from marshmallow.exceptions import ValidationError
 from marshmallow.fields import (
     Integer,
@@ -26,6 +26,7 @@ class SinkBase(Schema):
         missing='replace'
     )
 
+
 class CSVSinkSchema(SinkBase):
     '''Schema for CSV sink'''
     type = String(required=True)
@@ -35,11 +36,12 @@ class PostgresSinkSchema(SinkBase):
     '''Schema for Postgres sink'''
     type = String(required=True)
 
-    @pre_load
+    @post_load
     def ensure_env(self, data, **kwargs):
         uri = os.environ.get('POSTGRESQL')
         if not uri:
             raise ValidationError('POSTGRESQL Environment variable not set!')
+        return data
 
 
 class SinkSchema(OneOfSchema):
