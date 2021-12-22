@@ -1,6 +1,6 @@
 '''Util variables and functions'''
 
-from .nsw_government import NSWGovIngest
+from .nsw_government import Ingest
 
 STATE_CODES = {
     'New South Wales': 'NSW',
@@ -25,7 +25,7 @@ STATE_NAMES = {
 }
 
 def retrieve_lga_lhd_map():
-    ingestion = NSWGovIngest({
+    ingestion = Ingest({
         'source': {
             'resource_type': 'cases_by_location',
         },

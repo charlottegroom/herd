@@ -8,7 +8,6 @@ import logging
 
 from .configuration import IngestSchema
 
-logging.basicConfig(level=logging.INFO)
 
 class BaseIngest():
     '''Base data ingestion class'''

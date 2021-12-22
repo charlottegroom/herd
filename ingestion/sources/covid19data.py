@@ -7,8 +7,7 @@ import io
 from datetime import datetime
 from marshmallow.fields import Nested, String
 
-from ingestion.ingest import BaseIngest, logging
-from ingestion.configuration import SourceSchema, IngestSchema
+from ingestion import BaseIngest, logging, SourceSchema, IngestSchema
 
 from .utils import STATE_NAMES
 
@@ -23,7 +22,7 @@ class IngestSchema(IngestSchema):
     source = Nested(SourceSchema)
 
 
-class COVIDAUIngest(BaseIngest):
+class Ingest(BaseIngest):
     '''Ingestion of COVID AU data'''
 
     def __init__(self, cfg):

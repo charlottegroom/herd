@@ -7,8 +7,8 @@ import pandera as pa
 from datetime import datetime
 from marshmallow.fields import Nested, String
 
-from ingestion.ingest import BaseIngest, logging
-from ingestion.configuration import SourceSchema, IngestSchema
+from ingestion import BaseIngest, logging, SourceSchema, IngestSchema
+
 
 RESOURCES = {
     'tests_by_location': 'fb95de01-ad82-4716-ab9a-e15cf2c78556',
@@ -27,7 +27,7 @@ class IngestSchema(IngestSchema):
     source = Nested(SourceSchema)
 
 
-class NSWGovIngest(BaseIngest):
+class Ingest(BaseIngest):
 
     def __init__(self, cfg):
         super().__init__(cfg)

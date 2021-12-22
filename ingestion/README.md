@@ -15,11 +15,11 @@ The ingestion module contains a base class for data source retrieval and data si
 3. **Validate** data via a defined schema;
 4. **Save** the data into a designated data sink, typically csv or database.
 
-The *BaseIngest* class contains a method for each of the generic steps above.
+The `BaseIngest` class contains a method for each of the generic steps above.
 
 All data sources are different and will require specific retrieval and processing methods.
 
-Therefore, the *BaseIngest* base class must be extended per data source and the following methods implemented:
+Therefore, the `BaseIngest` base class must be extended per data source and the following methods implemented:
 
 ```python
 def retrieve(self):
@@ -46,11 +46,13 @@ def validate(self, df):
 
 The `save` method contains logic to save the dataframe to different data sinks. This method can be extended for other sink types. Current sinks supported are csv and postgres.
 
-In this way, the *BaseIngest* object is modular, extensible and configurable for many different types of data sources and sinks.
+In this way, the `BaseIngest` object is modular, extensible and configurable for many different types of data sources and sinks.
+
+> NOTE: The name of the ingestion class per source module *must* be named `Ingest` for the main logic to run.
 
 ### Configuration
 
-The *BaseIngest* base class needs to be configured for both the source and the sink locations. See example configuration below.
+The `BaseIngest` base class needs to be configured for both the source and the sink locations. See example configuration below.
 
 ```json
 {
@@ -113,6 +115,31 @@ The following data sources were found, covering the above measures:
 The main.py script can be configured to save the specified data sources to the specified data sink.
 
 On GitHub, this csv is updated (from the full dataset) daily using a cronjob and the changes are committed to the GitHub repository via the bash script update_and_commit.sh.
+
+### Configuration
+The main script is configured in the following way:
+
+```yaml
+- module: covid19data
+  cfg:
+    sink:
+      type: csv
+      name: ingestion/data/covid_au_data
+      chunksize: 100
+      mode: replace
+    source:
+      filename: COVID_AU_state.csv
+- module: vaccinations
+  cfg:
+    sink:
+      type: csv
+      name: ingestion/data/covid_au_vaccination_data
+      chunksize: 100
+      mode: replace
+    source:
+      collection: covid-19-vaccination-vaccination-data
+```
+where the field `module` refers to the name of the script which houses the `Ingest` class to be used to ingest data from, and the field `cfg` is the configuration of the `Ingest` class as per the `IngestSchema` marshmallow schema.
 
 ## Development
 

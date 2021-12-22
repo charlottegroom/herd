@@ -1,110 +1,45 @@
-'''Script to merge and sink datasets'''
+'''Main Script'''
+import argparse
+import yaml
+from marshmallow.fields import Nested, String
+from marshmallow.schema import Schema
+from importlib import import_module
+from ingestion import IngestSchema, logging
 
-import pandas as pd
-
-from sources.nsw_government import NSWGovIngest
-from sources.vaccinations import VaxIngest
-from sources.covid19data import COVIDAUIngest
+class Configuration(Schema):
+    module = String(required=True)
+    cfg = Nested(IngestSchema, required=True)
 
 FILEPATH = 'ingestion/data/{name}'
 
-def main():
-    # Construct dataset ingestion engines
-    ingestion_engines = [
-        {
-            'engine': COVIDAUIngest,
-            'cfg': {
-                'sink': {
-                    'type': 'csv',
-                    'name': 'covid_au_data',
-                    'chunksize': 100,
-                    'mode': 'replace',
-                },
-                'source': {
-                    'filename': 'COVID_AU_state.csv',
-                },
-            },
-        },
-        {
-            'engine': COVIDAUIngest,
-            'cfg': {
-                'sink': {
-                    'type': 'csv',
-                    'name': 'covid_au_death_data',
-                    'chunksize': 100,
-                    'mode': 'replace',
-                },
-                'source': {
-                    'filename': 'COVID_AU_deaths.csv',
-                },
-            },
-        },
-        {
-            'engine': VaxIngest,
-            'cfg': {
-                'sink': {
-                    'type': 'csv',
-                    'name': 'covid_au_vaccination_data',
-                    'chunksize': 100,
-                    'mode': 'replace',
-                },
-                'source': {
-                    'collection': 'covid-19-vaccination-vaccination-data',
-                },
-            },
-        },
-        {
-            'engine': VaxIngest,
-            'cfg': {
-                'sink': {
-                    'type': 'csv',
-                    'name': 'covid_vaccination_by_lga',
-                    'chunksize': 100,
-                    'mode': 'replace',
-                },
-                'source': {
-                    'collection': 'covid-19-vaccination-geographic-vaccination-rates-lga'
-                },
-            },
-        },
-        {
-            'engine': NSWGovIngest,
-            'cfg': {
-                'sink': {
-                    'type': 'csv',
-                    'name': 'covid_nsw_tests_by_location',
-                    'chunksize': 100,
-                    'mode': 'replace',
-                },
-                'source': {
-                    'resource_type': 'tests_by_location'
-                },
-            },
-        },
-        {
-            'engine': NSWGovIngest,
-            'cfg': {
-                'sink': {
-                    'type': 'csv',
-                    'name': 'covid_nsw_cases_by_location',
-                    'chunksize': 100,
-                    'mode': 'replace',
-                },
-                'source': {
-                    'resource_type': 'cases_by_location'
-                },
-            },
-        },
-    ]
-
-    for i in ingestion_engines:
-        engine = i['engine'](i['cfg'])
+def main(args):
+    # Get config
+    with open(args.config) as f:
+        config = yaml.safe_load(f)
+    for i in config:
+        module = import_module(f'.{i["module"]}', package='sources')
+        # Ensure that the Ingest class inherits from the BaseIngest
+        engine = module.Ingest(i['cfg'])
         name = i['cfg']['sink']['name']
-        # Sink individual dataset
+        # Retrieve
         df = engine.retrieve()
+        # Process
         df = engine.process(df)
+        # Validate
         df = engine.validate(df)
-        engine.save(df, name=FILEPATH.format(name=name))
+        # Save
+        engine.save(df, name=name)
 
 if __name__=='__main__':
-    main()
+    # Parse arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--config', type=str, help='Path to config file.', required=True)
+    parser.add_argument('--debug', action='store_true')
+    args = parser.parse_args()
+    # Set logging level
+    if args.debug:
+        logging.basicConfig(level=logging.DEBUG)
+    else:
+        logging.basicConfig(level=logging.INFO)
+    # Run main logic
+    main(args)

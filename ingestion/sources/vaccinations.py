@@ -12,8 +12,7 @@ from multiprocessing import Pool
 
 from .utils import STATE_CODES, STATE_NAMES, LGA_LHD_MAP
 
-from ingestion.ingest import BaseIngest, logging
-from ingestion.configuration import SourceSchema, IngestSchema
+from ingestion import BaseIngest, logging, SourceSchema, IngestSchema
 
 BASE_URL = 'https://www.health.gov.au/'
 
@@ -27,7 +26,7 @@ class IngestSchema(IngestSchema):
     source = Nested(SourceSchema)
 
 
-class VaxIngest(BaseIngest):
+class Ingest(BaseIngest):
 
     def __init__(self, cfg):
         super().__init__(cfg)
