@@ -12,45 +12,62 @@ The ingestion module contains a base class for data source retrieval and data si
     3. Transform fields;
     4. Rename fields;
     5. Aggregate over fields;
-3. **Save** the data into a designated data sink, typically csv or database.
+3. **Validate** data via a defined schema;
+4. **Save** the data into a designated data sink, typically csv or database.
 
-### Source
-
-The *Source* base class encapsulates the **Retrieve** and **Process** steps above, as they pertain to source data itself.
+The *BaseIngest* class contains a method for each of the generic steps above.
 
 All data sources are different and will require specific retrieval and processing methods.
 
-Therefore, the *Source* base class must be extended per data source and the following methods implemented:
+Therefore, the *BaseIngest* base class must be extended per data source and the following methods implemented:
 
 ```python
 def retrieve(self):
-    '''Get raw data from source. Returns list of dictionaries.
+    '''Retrieve raw data from source.
+    Returns dataframe.
     '''
-    raise NotImplementedError
+    raise NotImplementedError('Data not retrieved.')
 
-def process(self):
-    '''Process raw data into desired format. Returns list of dictionaries.
+def process(self, df):
+    '''Process raw data.
+    Returns dataframe.
     '''
-    return self.retrieve()
+    return df
+
+def validate(self, df):
+    '''Validate processed data'''
+    # Infer schema
+    schema = pa.infer_schema(df)
+    # Validate data
+    return schema(df)
 ```
 
-In this way, the *Source* object is modular, extensible and configurable for many different types of data sources.
+> NOTE: The default validate method uses the inferred dataframe schema from the pandera module. This can be overwritten for specific validation.
 
-#### Configuration
+The `save` method contains logic to save the dataframe to different data sinks. This method can be extended for other sink types. Current sinks supported are csv and postgres.
 
-The *Source* base class has a blank configuration Marshmallow *Schema* that needs to be defined in order to validate the configuration fields. The configuration fields are defined per source, depending on what dimensions need to be specified for the retrieval of data e.g. collection, dataset, filename etc.
+In this way, the *BaseIngest* object is modular, extensible and configurable for many different types of data sources and sinks.
 
-### Sink
+### Configuration
 
-The *Sink* base class encapsulates the **Save** step above, sending the retrieved and processed data to the location of choice.
+The *BaseIngest* base class needs to be configured for both the source and the sink locations. See example configuration below.
 
-This class has a single method: `save`. This method can be extended to save to different sink types, modulated by the Sink class configuration input.
+```json
+{
+    "source": {
+        "collection": "covid-19-data",
+    } ,
+    "sink": {
+        "type": "csv",
+        "name": "covid-19",
+        "mode": "replace",
+        "chunksize": 100,
+    }
+}
+```
 
-#### Configuration
-
-The configuration of the sink type is defined by Marshmallow *Oneofschema* objects which allows the user to define the sink parameters per sink type.
-
-Currently, only the csv sink type is implemented, which only requires a filename to save to.
+The source field has a blank configuration Marshmallow *Schema* that needs to be overwritten in order to validate the configuration fields specific to the source.
+The sink field may have different configuration field per sink `type`. The universal sink fields are `name`, `mode` and `chunksize`.
 
 ## Data Sources
 
@@ -92,10 +109,10 @@ The following data sources were found, covering the above measures:
 | COVID-19 Data                                  | COVID-19 Data, Deaths                                     | CSV (GitHub) | 1D           | https://github.com/M3IT/COVID-19_Data                        | Date, State, Age Group (deaths)                              | Cases, Deaths, Hospitalisations, ICU, Vent, Vaccination      | Y        |
 | Australian Government                          | COVID-19 vaccination – vaccination data                   | CSV          | 1D           | https://www.health.gov.au/resources/collections/covid-19-vaccination-vaccination-data | Date, State, Age Group, Sex                                  | 1st Dose, 2nd Dose                                           | Y        |
 
-## Data Sink
-The data is sunk to a csv using the [sink.py](herd/ingestion/sink.py) script which retrieves and processes all the datasets and merges them into a single dataset which overlapping dimensions.
+## Main
+The main.py script can be configured to save the specified data sources to the specified data sink.
 
-This csv is updated (from the full dataset) daily using a cronjob and the changes are committed to the GitHub repository (TODO).
+On GitHub, this csv is updated (from the full dataset) daily using a cronjob and the changes are committed to the GitHub repository via the bash script update_and_commit.sh.
 
 ## Development
 

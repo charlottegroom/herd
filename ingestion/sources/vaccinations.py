@@ -1,17 +1,19 @@
 '''Retrieve and process vaccination data'''
 
-from copy import deepcopy
-from marshmallow.fields import String
 import requests
+import pandas as pd
+import pandera as pa
+import re
+from copy import deepcopy
+from marshmallow.fields import Nested, String
 from datetime import datetime
 from bs4 import BeautifulSoup
-import pandas as pd
-import re
 from multiprocessing import Pool
 
 from .utils import STATE_CODES, STATE_NAMES, LGA_LHD_MAP
-from ingestion import Source, SourceSchema
 
+from ingestion.ingest import BaseIngest, logging
+from ingestion.configuration import SourceSchema, IngestSchema
 
 BASE_URL = 'https://www.health.gov.au/'
 
@@ -20,18 +22,22 @@ class SourceSchema(SourceSchema):
     '''Schema for source'''
     collection = String(required=True)
 
+class IngestSchema(IngestSchema):
+    '''Schema for Ingest class config'''
+    source = Nested(SourceSchema)
 
-class VaxSource(Source):
+
+class VaxIngest(BaseIngest):
 
     def __init__(self, cfg):
         super().__init__(cfg)
-        self.cfg = SourceSchema().load(cfg)
+        self.cfg = IngestSchema().load(cfg)
 
     def retrieve(self):
         '''Get raw vaccination data'''
-        collection = self.cfg['collection']
+        collection = self.cfg['source']['collection']
         url = BASE_URL + 'resources/collections/' + collection
-        print(f'Retrieving collection: {url}')
+        logging.info(f'Retrieving data from {collection}')
         response = requests.get(url)
         soup = BeautifulSoup(response.text, features="html.parser")
         table = soup.find('div', {'class': 'paragraphs-items'})
@@ -48,7 +54,7 @@ class VaxSource(Source):
             args.append((excel_file['href'], collection))
         # Download datasets in parallel
         with Pool(5) as p:
-            return pd.concat(p.starmap(self._download_dataset, args)).to_dict('records')
+            return pd.concat(p.starmap(self._download_dataset, args))
 
     def _download_dataset(self, link, collection):
         '''Retrieves individual dataset given a link and collection name.
@@ -57,7 +63,7 @@ class VaxSource(Source):
             link (str): Link to the dataset.
             collection (str): Name of the dataset to handled specific download.
         '''
-        print(f'Downloading file: {link}')
+        logging.debug(f'Downloading file: {link}')
         if collection == 'covid-19-vaccination-vaccination-data':
             _df = pd.read_excel(link)
             _df = _df.dropna()
@@ -73,15 +79,16 @@ class VaxSource(Source):
             "%d-%B-%Y"
         )
         _df['date'] = date
-        print(f'Download done!: {date}')
+        logging.debug(f'Download done!: {date}')
         return _df
 
-    def process(self):
+    def process(self, df):
         '''Process raw vaccination data'''
-        collection = self.cfg['collection']
+        collection = self.cfg['source']['collection']
+        logging.info(f'Processing data from {collection}')
         if collection == 'covid-19-vaccination-vaccination-data':
             docs = []
-            for doc in self.retrieve():
+            for doc in df.to_dict('records'):
                 for state in STATE_CODES.values():
                     _doc = {}
                     # Calculate fields
@@ -127,9 +134,8 @@ class VaxSource(Source):
                         __doc['vax_2_%'] = vax_2_dose/population
                         __doc['population'] = population
                         docs.append(__doc)
-            return docs
+            df = pd.DataFrame(docs)
         elif collection == 'covid-19-vaccination-geographic-vaccination-rates-lga':
-            df = pd.DataFrame(self.retrieve())
             # Transform fields
             df = df.replace('N/A', None)
             df['vax_1_%_15+'] = df['vax_1_%_15+'].apply(
@@ -162,10 +168,53 @@ class VaxSource(Source):
                 lambda x: round(x) if not pd.isnull(x) else None
             )
             # Add fields
+            df['country'] = 'Australia'
             df = pd.merge(df, LGA_LHD_MAP)
-            # Return docs
-            return df.to_dict('records')
-        else:
-            raise NotImplementedError(
-                f'Processing for collection {collection} not implemented.'
+        # Return dataframe
+        return df
+
+    def validate(self, df):
+        '''Validate data'''
+        collection = self.cfg['source']['collection']
+        logging.info(f'Validating data from {collection}')
+        if collection == 'covid-19-vaccination-vaccination-data':
+            schema = pa.DataFrameSchema({
+                # Dimensions
+                "date": pa.Column(datetime),
+                "state_name": pa.Column(str, nullable=True),
+                "state_code": pa.Column(str, nullable=True),
+                "country": pa.Column(str, nullable=True),
+                "age_group": pa.Column(str, nullable=True),
+                "sex": pa.Column(str, nullable=True),
+                # Measures
+                "vax_1_dose": pa.Column(int, nullable=True, coerce=True),
+                "vax_2_dose": pa.Column(int, nullable=True, coerce=True),
+                "vax_1_%": pa.Column(float, nullable=True, coerce=True),
+                "vax_2_%": pa.Column(float, nullable=True, coerce=True),
+                "population": pa.Column(int, nullable=True, coerce=True),
+            },
+            # Filter out columns not specified
+            strict='filter',
             )
+        elif collection == 'covid-19-vaccination-geographic-vaccination-rates-lga':
+            schema = pa.DataFrameSchema({
+                # Dimensions
+                "date": pa.Column(datetime),
+                "lhd_code": pa.Column(str, nullable=True),
+                "lhd_name": pa.Column(str, nullable=True),
+                "lga_code": pa.Column(str, nullable=True),
+                "lga_name": pa.Column(str, nullable=True),
+                "state_name": pa.Column(str, nullable=True),
+                "state_code": pa.Column(str, nullable=True),
+                "country": pa.Column(str, nullable=True),
+                # Measures
+                "vax_1_dose_15+": pa.Column(float, nullable=True, coerce=True),
+                "vax_2_dose_15+": pa.Column(float, nullable=True, coerce=True),
+                "vax_1_%_15+": pa.Column(float, nullable=True, coerce=True),
+                "vax_2_%_15+": pa.Column(float, nullable=True, coerce=True),
+                "population_15+": pa.Column(float, nullable=True, coerce=True),
+            },
+            # Filter out columns not specified
+            strict='filter',
+            )
+        return schema(df)

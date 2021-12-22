@@ -1,12 +1,14 @@
 '''Script to ingest data from NSW Government'''
 
 import re
-from marshmallow.fields import String
 import requests
 import pandas as pd
+import pandera as pa
+from datetime import datetime
+from marshmallow.fields import Nested, String
 
-from ingestion import Source, SourceSchema
-
+from ingestion.ingest import BaseIngest, logging
+from ingestion.configuration import SourceSchema, IngestSchema
 
 RESOURCES = {
     'tests_by_location': 'fb95de01-ad82-4716-ab9a-e15cf2c78556',
@@ -20,19 +22,25 @@ class SourceSchema(SourceSchema):
     resource_type = String(required=True)
 
 
-class NSWGovSource(Source):
+class IngestSchema(IngestSchema):
+    '''Schema for Ingest class config'''
+    source = Nested(SourceSchema)
+
+
+class NSWGovIngest(BaseIngest):
 
     def __init__(self, cfg):
         super().__init__(cfg)
-        self.cfg = SourceSchema().load(cfg)
+        self.cfg = IngestSchema().load(cfg)
 
     def retrieve(self):
         '''Get raw data from NSW Government.
         '''
-        resource_type = self.cfg['resource_type']
+        resource_type = self.cfg['source']['resource_type']
+        data = []
         def recursive_get_data(sql_statement=None):
             '''Recursive function to get data'''
-            print(f'Retrieving data from {resource_type}')
+            logging.info(f'Retrieving data from {resource_type}')
             resource_id = RESOURCES[resource_type]
             # Construct SQL statement
             if not sql_statement:
@@ -50,7 +58,7 @@ class NSWGovSource(Source):
                 yield record
             # Check if results are truncated
             if j['result'].get('records_truncated'):
-                print('Result truncated, still retrieving...')
+                logging.debug('Result truncated, still retrieving...')
                 # Get latest record
                 last_record = records[-1]
                 date_field = None
@@ -63,32 +71,35 @@ class NSWGovSource(Source):
                 '''
                 for record in recursive_get_data(sql_statement):
                     yield record
-        # Return docs
-        return list(recursive_get_data())
+        # Return dataframe
+        data = list(recursive_get_data())
+        return pd.DataFrame(data)
 
-    def process(self):
+    def process(self, df):
         '''Processes raw data from NSW Government.
         '''
-        # Retrieve data
-        df = pd.DataFrame(self.retrieve())
         # Drop fields
         df = df.drop(['_id', '_full_text'], axis=1)
-        resource_type = self.cfg['resource_type']
+        resource_type = self.cfg['source']['resource_type']
+        logging.info(f'Retrieving data from {resource_type}')
         if resource_type == 'tests_by_location':
             # Rename fields
-            df = df.rename(columns={'test_date': 'date'})
+            df = df.rename(columns={
+                'test_date': 'date',
+                'test_count': 'tests',
+            })
         elif resource_type == 'cases_by_location':
             # Rename fields
             df = df.rename(columns={'notification_date': 'date'})
             # Add fields
-            df['case_count'] = 1
+            df['cases'] = 1
             df = df.groupby(by=[
                 'date',
                 'lhd_2010_code',
                 'lhd_2010_name',
                 'lga_code19',
                 'lga_name19'
-            ])['case_count'].count().reset_index()
+            ])['cases'].count().reset_index()
         elif resource_type == 'cases_by_age_range':
             # Rename fields
             df = df.rename(columns={'notification_date': 'date'})
@@ -97,10 +108,10 @@ class NSWGovSource(Source):
                 lambda x: tuple(re.findall(r'\d+', x))
             )
             # Add fields
-            df['case_count'] = 1
+            df['cases'] = 1
             df = df.groupby(
                 ['date', 'age_group']
-            )['case_count'].count().reset_index()
+            )['cases'].count().reset_index()
         else:
             raise NotImplementedError(
                 f'Processing for resource type {resource_type} not implemented.'
@@ -109,6 +120,7 @@ class NSWGovSource(Source):
         df['date'] = pd.to_datetime(df['date'])
         df['state_name'] = 'New South Wales'
         df['state_code'] = 'NSW'
+        df['country'] = 'Australia'
         # Transform fields
         df = df.replace('None', None)
         # Rename columns
@@ -118,5 +130,62 @@ class NSWGovSource(Source):
             'lga_code19': 'lga_code',
             'lga_name19': 'lga_name',
         })
-        # Return docs
-        return df.to_dict('records')
+        # Return dataframe
+        return df
+
+    def validate(self, df):
+        '''Validate data'''
+        resource_type = self.cfg['source']['resource_type']
+        logging.info(f'Validating data from {resource_type}')
+        if resource_type == 'tests_by_location':
+            schema = pa.DataFrameSchema({
+                # Dimensions
+                "date": pa.Column(datetime),
+                "lhd_code": pa.Column(str),
+                "lhd_name": pa.Column(str),
+                "lga_code": pa.Column(str),
+                "lga_name": pa.Column(str),
+                "state_name": pa.Column(str),
+                "state_code": pa.Column(str),
+                "country": pa.Column(str),
+                # Measures
+                "tests": pa.Column(int, nullable=True, coerce=True),
+            },
+            # Filter out columns not specified
+            strict='filter',
+            )
+            df = schema(df)
+        elif resource_type == 'cases_by_location':
+            schema = pa.DataFrameSchema({
+                # Dimensions
+                "date": pa.Column(datetime),
+                "lhd_code": pa.Column(str),
+                "lhd_name": pa.Column(str),
+                "lga_code": pa.Column(str),
+                "lga_name": pa.Column(str),
+                "state_name": pa.Column(str),
+                "state_code": pa.Column(str),
+                "country": pa.Column(str),
+                # Measures
+                "cases": pa.Column(int, nullable=True, coerce=True),
+            },
+            # Filter out columns not specified
+            strict='filter',
+            )
+            df = schema(df)
+        elif resource_type == 'cases_by_age_range':
+            schema = pa.DataFrameSchema({
+                # Dimensions
+                "date": pa.Column(datetime),
+                "state_name": pa.Column(str),
+                "state_code": pa.Column(str),
+                "country": pa.Column(str),
+                "age_group": pa.Column(str),
+                # Measures
+                "cases": pa.Column(int, nullable=True, coerce=True),
+            },
+            # Filter out columns not specified
+            strict='filter',
+            )
+            df = schema(df)
+        return df

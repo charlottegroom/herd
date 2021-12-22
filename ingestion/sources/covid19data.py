@@ -1,12 +1,16 @@
 '''Data downloaded from COVID-19 Data GitHub repo'''
 
-from marshmallow.fields import String
 import requests
 import pandas as pd
-from datetime import datetime
+import pandera as pa
 import io
+from datetime import datetime
+from marshmallow.fields import Nested, String
+
+from ingestion.ingest import BaseIngest, logging
+from ingestion.configuration import SourceSchema, IngestSchema
+
 from .utils import STATE_NAMES
-from ingestion import Source, SourceSchema
 
 
 class SourceSchema(SourceSchema):
@@ -14,31 +18,36 @@ class SourceSchema(SourceSchema):
     filename = String(required=True)
 
 
-class COVIDAUSource(Source):
+class IngestSchema(IngestSchema):
+    '''Schema for Ingest class config'''
+    source = Nested(SourceSchema)
+
+
+class COVIDAUIngest(BaseIngest):
     '''Ingestion of COVID AU data'''
 
     def __init__(self, cfg):
         super().__init__(cfg)
-        self.cfg = SourceSchema().load(cfg)
+        self.cfg = IngestSchema().load(cfg)
 
     def retrieve(self):
         '''Retrieve data'''
         # Parse config
-        filename = self.cfg['filename']
+        filename = self.cfg['source']['filename']
+        logging.info(f'Retrieving data from {filename}')
         # Make request
         response = requests.get(
             f'https://raw.githubusercontent.com/M3IT/COVID-19_Data/master/Data/{filename}'
         )
         df = pd.read_csv(io.StringIO(response.content.decode('utf-8')))
         df['date'] = pd.to_datetime(df['date'])
-        # Return docs
-        return df.to_dict('records')
+        # Return dataframe
+        return df
 
-    def process(self):
-        '''Process data'''
-        # Retrieve data
-        df = pd.DataFrame(self.retrieve())
-        filename = self.cfg['filename']
+    def process(self, df):
+        '''Process and validate data'''
+        filename = self.cfg['source']['filename']
+        logging.info(f'Processing data from {filename}')
         if filename == 'COVID_AU_state.csv':
             # Rename fields
             df = df.rename(columns={
@@ -62,14 +71,57 @@ class COVIDAUSource(Source):
             )
             df['sex'] = df['sex'].replace('*', '')
             # Add fields
-            df['death_count'] = 1
+            df['deaths'] = 1
             df = df.groupby(by=[
                 'date',
                 'state_name',
                 'state_code',
                 'age_group',
                 'sex',
-            ])['death_count'].count().reset_index()
+            ])['deaths'].count().reset_index()
             df['country'] = 'Australia'
-        # Return docs
-        return df.to_dict('records')
+        # Return dataframe
+        return df
+
+    def validate(self, df):
+        filename = self.cfg['source']['filename']
+        logging.info(f'Validating data from {filename}')
+        if filename == 'COVID_AU_state.csv':
+            schema = pa.DataFrameSchema({
+                # Dimensions
+                "date": pa.Column(datetime),
+                "state_name": pa.Column(str),
+                "state_code": pa.Column(str),
+                "country": pa.Column(str),
+                # Measures
+                "confirmed": pa.Column(int, nullable=True, coerce=True),
+                "deaths": pa.Column(int, nullable=True, coerce=True),
+                "tests": pa.Column(int, nullable=True, coerce=True),
+                "positives": pa.Column(int, nullable=True, coerce=True),
+                "recovered": pa.Column(int, nullable=True, coerce=True),
+                "hosp": pa.Column(int, nullable=True, coerce=True),
+                "icu": pa.Column(int, nullable=True, coerce=True),
+                "vent": pa.Column(int, nullable=True, coerce=True),
+                "vaccines": pa.Column(int, nullable=True, coerce=True),
+            },
+            # Filter out columns not specified
+            strict='filter',
+            )
+            df = schema(df)
+        elif filename == 'COVID_AU_deaths.csv':
+            schema = pa.DataFrameSchema({
+                # Dimensions
+                "date": pa.Column(datetime),
+                "state_name": pa.Column(str),
+                "state_code": pa.Column(str),
+                "country": pa.Column(str),
+                "age_group": pa.Column(str),
+                "sex": pa.Column(str),
+                # Measures
+                "deaths": pa.Column(int, nullable=True, coerce=True),
+            },
+            # Filter out columns not specified
+            strict='filter',
+            )
+            df = schema(df)
+        return df

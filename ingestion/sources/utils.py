@@ -1,7 +1,6 @@
 '''Util variables and functions'''
 
-import pandas as pd
-from .nsw_government import NSWGovSource
+from .nsw_government import NSWGovIngest
 
 STATE_CODES = {
     'New South Wales': 'NSW',
@@ -26,10 +25,13 @@ STATE_NAMES = {
 }
 
 def retrieve_lga_lhd_map():
-    ingestion = NSWGovSource({
-        'resource_type': 'cases_by_location',
+    ingestion = NSWGovIngest({
+        'source': {
+            'resource_type': 'cases_by_location',
+        },
     })
-    df = pd.DataFrame(ingestion.process())
+    df = ingestion.retrieve()
+    df = ingestion.process(df)
     return df.drop_duplicates(
         ['lhd_code','lhd_name', 'lga_code', 'lga_name']
     )[['lhd_code','lhd_name', 'lga_code', 'lga_name']]
