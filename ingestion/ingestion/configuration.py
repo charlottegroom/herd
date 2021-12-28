@@ -9,7 +9,7 @@ from marshmallow.fields import (
 )
 from marshmallow_oneofschema import OneOfSchema
 import os
-
+import pandera as pa
 
 class SourceSchema(Schema):
     '''Custom schema per source'''
@@ -57,3 +57,12 @@ class IngestSchema(Schema):
     '''Schema for Ingest class config'''
     source = Nested(SourceSchema, required=True)
     sink = Nested(SinkSchema)
+
+
+BASE_PROCESSED_SCHEMA = pa.DataFrameSchema({
+    # Metadata
+    "dimensions_id": pa.Column(int),
+},
+# Filter out columns not specified
+strict='filter',
+)

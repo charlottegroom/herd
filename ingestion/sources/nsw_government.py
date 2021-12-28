@@ -6,9 +6,15 @@ import pandas as pd
 import pandera as pa
 from datetime import datetime
 from marshmallow.fields import Nested, String
+from copy import deepcopy
 
-from ingestion import BaseIngest, logging, SourceSchema, IngestSchema
-
+from ingestion import (
+    BaseIngest,
+    logging,
+    SourceSchema,
+    IngestSchema,
+    BASE_PROCESSED_SCHEMA
+)
 
 RESOURCES = {
     'tests_by_location': 'fb95de01-ad82-4716-ab9a-e15cf2c78556',
@@ -82,12 +88,38 @@ class Ingest(BaseIngest):
         df = df.drop(['_id', '_full_text'], axis=1)
         resource_type = self.cfg['source']['resource_type']
         logging.info(f'Retrieving data from {resource_type}')
+        # Add fields
+        df['state_name'] = 'New South Wales'
+        df['state_code'] = 'NSW'
+        df['country'] = 'Australia'
+        # Rename columns
+        df = df.rename(columns={
+            'lhd_2010_code': 'lhd_code',
+            'lhd_2010_name': 'lhd_name',
+            'lga_code19': 'lga_code',
+            'lga_name19': 'lga_name',
+        })
         if resource_type == 'tests_by_location':
             # Rename fields
             df = df.rename(columns={
                 'test_date': 'date',
                 'test_count': 'tests',
             })
+            df['dimensions_id'] = df.apply(
+                lambda x: hash(
+                    tuple([
+                        x.date,
+                        x.lhd_code,
+                        x.lhd_name,
+                        x.lga_code,
+                        x.lga_name,
+                        x.state_code,
+                        x.state_name,
+                        x.country,
+                    ])
+                ),
+                axis=1
+            )
         elif resource_type == 'cases_by_location':
             # Rename fields
             df = df.rename(columns={'notification_date': 'date'})
@@ -95,11 +127,29 @@ class Ingest(BaseIngest):
             df['cases'] = 1
             df = df.groupby(by=[
                 'date',
-                'lhd_2010_code',
-                'lhd_2010_name',
-                'lga_code19',
-                'lga_name19'
+                'lhd_code',
+                'lhd_name',
+                'lga_code',
+                'lga_name',
+                'state_code',
+                'state_name',
+                'country',
             ])['cases'].count().reset_index()
+            df['dimensions_id'] = df.apply(
+                lambda x: hash(
+                    tuple([
+                        x.date,
+                        x.lhd_code,
+                        x.lhd_name,
+                        x.lga_code,
+                        x.lga_name,
+                        x.state_code,
+                        x.state_name,
+                        x.country,
+                    ])
+                ),
+                axis=1
+            )
         elif resource_type == 'cases_by_age_range':
             # Rename fields
             df = df.rename(columns={'notification_date': 'date'})
@@ -110,26 +160,27 @@ class Ingest(BaseIngest):
             # Add fields
             df['cases'] = 1
             df = df.groupby(
-                ['date', 'age_group']
+                ['date', 'age_group', 'state_code', 'state_name', 'country']
             )['cases'].count().reset_index()
+            df['dimensions_id'] = df.apply(
+                lambda x: hash(
+                    tuple([
+                        x.date,
+                        x.age_group,
+                        x.state_code,
+                        x.state_name,
+                        x.country,
+                    ])
+                ),
+                axis=1
+            )
         else:
             raise NotImplementedError(
                 f'Processing for resource type {resource_type} not implemented.'
             )
-        # Add fields
-        df['date'] = pd.to_datetime(df['date'])
-        df['state_name'] = 'New South Wales'
-        df['state_code'] = 'NSW'
-        df['country'] = 'Australia'
         # Transform fields
+        df['date'] = pd.to_datetime(df['date'])
         df = df.replace('None', None)
-        # Rename columns
-        df = df.rename(columns={
-            'lhd_2010_code': 'lhd_code',
-            'lhd_2010_name': 'lhd_name',
-            'lga_code19': 'lga_code',
-            'lga_name19': 'lga_name',
-        })
         # Return dataframe
         return df
 
@@ -138,7 +189,7 @@ class Ingest(BaseIngest):
         resource_type = self.cfg['source']['resource_type']
         logging.info(f'Validating data from {resource_type}')
         if resource_type == 'tests_by_location':
-            schema = pa.DataFrameSchema({
+            schema = BASE_PROCESSED_SCHEMA.add_columns({
                 # Dimensions
                 "date": pa.Column(datetime),
                 "lhd_code": pa.Column(str),
@@ -148,15 +199,12 @@ class Ingest(BaseIngest):
                 "state_name": pa.Column(str),
                 "state_code": pa.Column(str),
                 "country": pa.Column(str),
+                "dimensions_id": pa.Column(int),
                 # Measures
                 "tests": pa.Column(int, nullable=True, coerce=True),
-            },
-            # Filter out columns not specified
-            strict='filter',
-            )
-            df = schema(df)
+            })
         elif resource_type == 'cases_by_location':
-            schema = pa.DataFrameSchema({
+            schema = BASE_PROCESSED_SCHEMA.add_columns({
                 # Dimensions
                 "date": pa.Column(datetime),
                 "lhd_code": pa.Column(str),
@@ -166,26 +214,23 @@ class Ingest(BaseIngest):
                 "state_name": pa.Column(str),
                 "state_code": pa.Column(str),
                 "country": pa.Column(str),
+                "dimensions_id": pa.Column(int),
                 # Measures
                 "cases": pa.Column(int, nullable=True, coerce=True),
-            },
-            # Filter out columns not specified
-            strict='filter',
-            )
+            })
             df = schema(df)
         elif resource_type == 'cases_by_age_range':
-            schema = pa.DataFrameSchema({
+            schema = deepcopy(BASE_PROCESSED_SCHEMA)
+            schema.add_columns({
                 # Dimensions
                 "date": pa.Column(datetime),
                 "state_name": pa.Column(str),
                 "state_code": pa.Column(str),
                 "country": pa.Column(str),
                 "age_group": pa.Column(str),
+                "dimensions_id": pa.Column(int),
                 # Measures
                 "cases": pa.Column(int, nullable=True, coerce=True),
-            },
-            # Filter out columns not specified
-            strict='filter',
-            )
+            })
             df = schema(df)
         return df

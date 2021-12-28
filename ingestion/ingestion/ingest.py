@@ -1,12 +1,29 @@
 '''Base class for data source ingestion'''
 
-from datetime import datetime
+from datetime import datetime, date, time, timedelta
 import os
-from sqlalchemy import create_engine
+import sqlalchemy
+from sqlalchemy import create_engine, ARRAY
 import pandera as pa
 import logging
+import pandas.api.types as ptypes
 
 from .configuration import IngestSchema
+
+_type_py2sql_dict = {
+ int: sqlalchemy.sql.sqltypes.BigInteger,
+ str: sqlalchemy.sql.sqltypes.Unicode,
+ float: sqlalchemy.sql.sqltypes.Float,
+ datetime: sqlalchemy.sql.sqltypes.DateTime,
+ bytes: sqlalchemy.sql.sqltypes.LargeBinary,
+ bool: sqlalchemy.sql.sqltypes.Boolean,
+ date: sqlalchemy.sql.sqltypes.Date,
+ time: sqlalchemy.sql.sqltypes.Time,
+ timedelta: sqlalchemy.sql.sqltypes.Interval,
+ list: sqlalchemy.sql.sqltypes.ARRAY,
+ tuple: sqlalchemy.sql.sqltypes.ARRAY,
+ dict: sqlalchemy.sql.sqltypes.JSON
+}
 
 
 class BaseIngest():
@@ -51,18 +68,35 @@ class BaseIngest():
             name = sink_cfg['name']
         mode = sink_cfg.get('mode')
         chunksize = sink_cfg.get('chunksize')
-        type = sink_cfg.get('type')
-        logging.info(f'Saving data to {type}...')
+        _type = sink_cfg.get('type')
+        logging.info(f'Saving data to {_type}...')
         # Save to csv
-        if type == 'csv':
+        if _type == 'csv':
             # Ensure csv file name
             if name[-4:] != '.csv':
                 name += '.csv'
             mode = 'a' if mode == 'append' else 'w'
             df.to_csv(name, mode=mode, chunksize=chunksize)
         # Save to PostgreSQL
-        elif type == 'postgres':
+        elif _type == 'postgres':
             # Connect to database
             uri = os.environ.get('POSTGRESQL')
             engine = create_engine(uri)
-            df.to_sql(name, engine, if_exists=mode, chunksize=chunksize)
+            # Convert dtypes
+            dtypes = {}
+            for col in df.columns:
+                if ptypes.is_object_dtype(df[col].dtype):
+                    _df = df[col].dropna()
+                    x = _df.iloc[0]
+                    if isinstance(x, tuple):
+                        t = _type_py2sql_dict.get(type(x[0]))
+                        if t is not None:
+                            dtypes[col] = ARRAY(t)
+            df.to_sql(
+                name,
+                engine,
+                if_exists=mode,
+                chunksize=chunksize,
+                index=False,
+                dtype=dtypes
+            )

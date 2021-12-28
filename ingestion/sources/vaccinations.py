@@ -9,10 +9,17 @@ from marshmallow.fields import Nested, String
 from datetime import datetime
 from bs4 import BeautifulSoup
 from multiprocessing import Pool
+from copy import deepcopy
+
+from ingestion import (
+    BaseIngest,
+    logging,
+    SourceSchema,
+    IngestSchema,
+    BASE_PROCESSED_SCHEMA
+)
 
 from .utils import STATE_CODES, STATE_NAMES, LGA_LHD_MAP
-
-from ingestion import BaseIngest, logging, SourceSchema, IngestSchema
 
 BASE_URL = 'https://www.health.gov.au/'
 
@@ -134,6 +141,19 @@ class Ingest(BaseIngest):
                         __doc['population'] = population
                         docs.append(__doc)
             df = pd.DataFrame(docs)
+            df['dimensions_id'] = df.apply(
+                lambda x: hash(
+                    tuple([
+                        x.date,
+                        x.state_name,
+                        x.state_code,
+                        x.country,
+                        x.age_group,
+                        x.sex,
+                    ])
+                ),
+                axis=1
+            )
         elif collection == 'covid-19-vaccination-geographic-vaccination-rates-lga':
             # Transform fields
             df = df.replace('N/A', None)
@@ -169,6 +189,21 @@ class Ingest(BaseIngest):
             # Add fields
             df['country'] = 'Australia'
             df = pd.merge(df, LGA_LHD_MAP)
+            df['dimensions_id'] = df.apply(
+                lambda x: hash(
+                    tuple([
+                        x.date,
+                        x.lhd_code,
+                        x.lhd_name,
+                        x.lga_code,
+                        x.lga_name,
+                        x.state_name,
+                        x.state_code,
+                        x.country,
+                    ])
+                ),
+                axis=1
+            )
         # Return dataframe
         return df
 
@@ -177,7 +212,7 @@ class Ingest(BaseIngest):
         collection = self.cfg['source']['collection']
         logging.info(f'Validating data from {collection}')
         if collection == 'covid-19-vaccination-vaccination-data':
-            schema = pa.DataFrameSchema({
+            schema = BASE_PROCESSED_SCHEMA.add_columns({
                 # Dimensions
                 "date": pa.Column(datetime),
                 "state_name": pa.Column(str, nullable=True),
@@ -185,18 +220,17 @@ class Ingest(BaseIngest):
                 "country": pa.Column(str, nullable=True),
                 "age_group": pa.Column(str, nullable=True),
                 "sex": pa.Column(str, nullable=True),
+                "dimensions_id": pa.Column(int),
                 # Measures
                 "vax_1_dose": pa.Column(int, nullable=True, coerce=True),
                 "vax_2_dose": pa.Column(int, nullable=True, coerce=True),
                 "vax_1_%": pa.Column(float, nullable=True, coerce=True),
                 "vax_2_%": pa.Column(float, nullable=True, coerce=True),
                 "population": pa.Column(int, nullable=True, coerce=True),
-            },
-            # Filter out columns not specified
-            strict='filter',
-            )
+            })
+            df = schema(df)
         elif collection == 'covid-19-vaccination-geographic-vaccination-rates-lga':
-            schema = pa.DataFrameSchema({
+            schema = BASE_PROCESSED_SCHEMA.add_columns({
                 # Dimensions
                 "date": pa.Column(datetime),
                 "lhd_code": pa.Column(str, nullable=True),
@@ -206,14 +240,13 @@ class Ingest(BaseIngest):
                 "state_name": pa.Column(str, nullable=True),
                 "state_code": pa.Column(str, nullable=True),
                 "country": pa.Column(str, nullable=True),
+                "dimensions_id": pa.Column(int),
                 # Measures
                 "vax_1_dose_15+": pa.Column(float, nullable=True, coerce=True),
                 "vax_2_dose_15+": pa.Column(float, nullable=True, coerce=True),
                 "vax_1_%_15+": pa.Column(float, nullable=True, coerce=True),
                 "vax_2_%_15+": pa.Column(float, nullable=True, coerce=True),
                 "population_15+": pa.Column(float, nullable=True, coerce=True),
-            },
-            # Filter out columns not specified
-            strict='filter',
-            )
-        return schema(df)
+            })
+            df = schema(df)
+        return df

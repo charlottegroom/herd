@@ -7,7 +7,13 @@ import io
 from datetime import datetime
 from marshmallow.fields import Nested, String
 
-from ingestion import BaseIngest, logging, SourceSchema, IngestSchema
+from ingestion import (
+    BaseIngest,
+    logging,
+    SourceSchema,
+    IngestSchema,
+    BASE_PROCESSED_SCHEMA
+)
 
 from .utils import STATE_NAMES
 
@@ -55,6 +61,17 @@ class Ingest(BaseIngest):
             })
             # Add fields
             df['country'] = 'Australia'
+            df['dimensions_id'] = df.apply(
+                lambda x: hash(
+                    tuple([
+                        x.date,
+                        x.state_name,
+                        x.state_code,
+                        x.country,
+                    ])
+                ),
+                axis=1
+            )
         elif filename == 'COVID_AU_deaths.csv':
             # Rename fields
             df = df.rename(columns={
@@ -68,17 +85,25 @@ class Ingest(BaseIngest):
                     if not pd.isnull(x['age_bracket']) else None,
                 axis=1
             )
-            df['sex'] = df['sex'].replace('*', '')
+            df['sex'] = df['sex'].apply(lambda x: x.replace('*', '') if not pd.isnull(x) else 'Unknown')
+            # df['age'] = df.apply(lambda x: x['age'] if not pd.isnull(x['age']) else x['age_group'][0] if x['age_group'].length==0 else None, axis=1)
             # Add fields
             df['deaths'] = 1
-            df = df.groupby(by=[
-                'date',
-                'state_name',
-                'state_code',
-                'age_group',
-                'sex',
-            ])['deaths'].count().reset_index()
             df['country'] = 'Australia'
+            df['dimensions_id'] = df.apply(
+                lambda x: hash(
+                    tuple([
+                        x.date,
+                        x.state_name,
+                        x.state_code,
+                        # x.age_group,
+                        x.age,
+                        x.sex,
+                        x.country
+                    ])
+                ),
+                axis=1
+            )
         # Return dataframe
         return df
 
@@ -86,7 +111,7 @@ class Ingest(BaseIngest):
         filename = self.cfg['source']['filename']
         logging.info(f'Validating data from {filename}')
         if filename == 'COVID_AU_state.csv':
-            schema = pa.DataFrameSchema({
+            schema = BASE_PROCESSED_SCHEMA.add_columns({
                 # Dimensions
                 "date": pa.Column(datetime),
                 "state_name": pa.Column(str),
@@ -102,25 +127,20 @@ class Ingest(BaseIngest):
                 "icu": pa.Column(int, nullable=True, coerce=True),
                 "vent": pa.Column(int, nullable=True, coerce=True),
                 "vaccines": pa.Column(int, nullable=True, coerce=True),
-            },
-            # Filter out columns not specified
-            strict='filter',
-            )
+            })
             df = schema(df)
         elif filename == 'COVID_AU_deaths.csv':
-            schema = pa.DataFrameSchema({
+            schema = BASE_PROCESSED_SCHEMA.add_columns({
                 # Dimensions
                 "date": pa.Column(datetime),
                 "state_name": pa.Column(str),
                 "state_code": pa.Column(str),
                 "country": pa.Column(str),
-                "age_group": pa.Column(str),
-                "sex": pa.Column(str),
+                "age_group": pa.Column(object, nullable=True, coerce=True),
+                "sex": pa.Column(str, nullable=True, coerce=True),
                 # Measures
                 "deaths": pa.Column(int, nullable=True, coerce=True),
-            },
-            # Filter out columns not specified
-            strict='filter',
-            )
+                "age": pa.Column(float, nullable=True, coerce=True),
+            })
             df = schema(df)
         return df
