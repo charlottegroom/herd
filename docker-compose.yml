@@ -11,3 +11,14 @@ services:
       - ./db/data:/var/lib/postgresql/data
     ports:
       - 5432:5432
+
+  # cube:
+  #   image: cubejs/cube:latest
+  #   ports:
+  #     - 4000:4000
+  #   environment:
+  #     - CUBEJS_DEV_MODE=true
+  #   volumes:
+  #     - ./cube/conf:/cube/conf
+  #   depends_on:
+  #     - postgres
