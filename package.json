@@ -19,8 +19,6 @@
     "devexpress-dashboard": "^21.2.4",
     "devexpress-dashboard-react": "^21.2.4",
     "devextreme": "^21.2.4",
-    "devextreme-react": "^21.2.4",
-    "@cubejs-backend/postgres-driver": "^0.29.8",
-    "@cubejs-backend/server": "^0.29.11"
+    "devextreme-react": "^21.2.4"
   }
 }

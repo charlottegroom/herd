@@ -9,12 +9,14 @@ import client from "./graphql/client";
 
 import Header from './components/Header';
 
-const API_URL = 'https://herd-covid-dashboard-web.herokuapp.com/';
-const CUBEJS_TOKEN =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDA1OTI5NDIsImV4cCI6MTY0MDY3OTM0Mn0.tTpV3b6mJ5eFU5CbebUntJIQjSTXrXD1RZg5ORJpD6A';
-const cubejsApi = cubejs(CUBEJS_TOKEN, {
-  apiUrl: `${API_URL}/cubejs-api/v1`,
+const jwt = require('jsonwebtoken');
+const CUBE_API_SECRET = '7f6d88f09e638149ba20ca552af5bf9df3e803785796ff211b6afb3420ec85cb3e8554843ec87c3e84cb055c75f15769b6cb0aa61b27dce789b21a6f069f50e7'
+const cubejsToken = jwt.sign({}, CUBE_API_SECRET, { expiresIn: '30d' });
+const cubejsApi = cubejs(cubejsToken, {
+  apiUrl: process.env.REACT_APP_API_URL,
 });
+
+console.log(cubejsToken)
 
 const AppLayout = ({ location, children }) => (
   <Layout style={{ height: "100%" }}>
