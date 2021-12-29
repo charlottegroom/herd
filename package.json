@@ -6,7 +6,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "dev": "cubejs-server"
+    "start": "cubejs-server"
   },
   "template": "docker",
   "templateVersion": "0.29.11",
