@@ -86,7 +86,7 @@ class Ingest(BaseIngest):
                 axis=1
             )
             df['sex'] = df['sex'].apply(lambda x: x.replace('*', '') if not pd.isnull(x) else 'Unknown')
-            # df['age'] = df.apply(lambda x: x['age'] if not pd.isnull(x['age']) else x['age_group'][0] if x['age_group'].length==0 else None, axis=1)
+            df['age'] = df.apply(lambda x: x['age'] if not pd.isnull(x['age']) else x['age_group'][0] if x['age_group'] is not None else None, axis=1)
             # Add fields
             df['deaths'] = 1
             df['country'] = 'Australia'
@@ -127,6 +127,9 @@ class Ingest(BaseIngest):
                 "icu": pa.Column(int, nullable=True, coerce=True),
                 "vent": pa.Column(int, nullable=True, coerce=True),
                 "vaccines": pa.Column(int, nullable=True, coerce=True),
+                "hosp_cum": pa.Column(int, nullable=True, coerce=True),
+                "icu_cum": pa.Column(int, nullable=True, coerce=True),
+                "vent_cum": pa.Column(int, nullable=True, coerce=True),
             })
             df = schema(df)
         elif filename == 'COVID_AU_deaths.csv':

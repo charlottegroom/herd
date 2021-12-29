@@ -2,10 +2,11 @@
 
 import requests
 import pandas as pd
+from requests.sessions import Session
 import pandera as pa
 import re
 from copy import deepcopy
-from marshmallow.fields import Nested, String
+from marshmallow.fields import Nested, String, Integer
 from datetime import datetime
 from bs4 import BeautifulSoup
 from multiprocessing import Pool
@@ -27,6 +28,7 @@ BASE_URL = 'https://www.health.gov.au/'
 class SourceSchema(SourceSchema):
     '''Schema for source'''
     collection = String(required=True)
+    limit = Integer()
 
 class IngestSchema(IngestSchema):
     '''Schema for Ingest class config'''
@@ -41,23 +43,30 @@ class Ingest(BaseIngest):
 
     def retrieve(self):
         '''Get raw vaccination data'''
+        limit = self.cfg['source'].get('limit')
+        session = Session()
         collection = self.cfg['source']['collection']
         url = BASE_URL + 'resources/collections/' + collection
         logging.info(f'Retrieving data from {collection}')
-        response = requests.get(url)
+        response = session.get(url)
         soup = BeautifulSoup(response.text, features="html.parser")
         table = soup.find('div', {'class': 'paragraphs-items'})
         a_tags = table.findAll('a')
         args = []
         # Get all Excel file links
         for a in a_tags:
-            response = requests.get(BASE_URL + a['href'])
+            response = session.get(BASE_URL + a['href'])
             soup = BeautifulSoup(response.text, features="html.parser")
             excel_file = soup.find('a', {
                 'class': 'health-file__link',
                 'data-filetype': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
             })
             args.append((excel_file['href'], collection))
+        with open("vax_excel_links.txt", "w") as output:
+            for row in args:
+                output.write(str(row[0]) + '\n')
+        if limit:
+            args = args[:limit]
         # Download datasets in parallel
         with Pool(5) as p:
             return pd.concat(p.starmap(self._download_dataset, args))

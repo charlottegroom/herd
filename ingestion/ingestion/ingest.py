@@ -61,7 +61,7 @@ class BaseIngest():
             logging.warning('No sink configuration provided.')
             return df
         # Add metadata
-        df['saved_date'] = datetime.utcnow().date()
+        df['saved_date'] = datetime.utcnow()
         df = df.drop_duplicates()
         # Parse config
         if not name:
