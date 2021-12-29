@@ -7,8 +7,16 @@ cube(`CovidNswTestsByLocation`, {
   },
 
   joins: {
-
+    CovidNswCasesByLocation: {
+      relationship: `hasMany`,
+      sql: `${CovidNswTestsByLocation}.lga_code = ${CovidNswCasesByLocation}.lga_code`
+    },
+    CovidVaccinationByLga: {
+      relationship: `hasMany`,
+      sql: `${CovidNswTestsByLocation}.lga_code = ${CovidVaccinationByLga}.lga_code`
+    },
   },
+
 
   measures: {
     tests: {
@@ -25,7 +33,7 @@ cube(`CovidNswTestsByLocation`, {
 
     stateName: {
       sql: `state_name`,
-      type: `string`
+      type: `string`,
     },
 
     lgaName: {
@@ -35,7 +43,8 @@ cube(`CovidNswTestsByLocation`, {
 
     lgaCode: {
       sql: `lga_code`,
-      type: `string`
+      type: `string`,
+      primaryKey: true,
     },
 
     lhdName: {
@@ -45,22 +54,20 @@ cube(`CovidNswTestsByLocation`, {
 
     lhdCode: {
       sql: `lhd_code`,
-      type: `string`
+      type: `string`,
+      primaryKey: true,
     },
 
     stateCode: {
       sql: `state_code`,
-      type: `string`
-    },
-
-    savedDate: {
-      sql: `saved_date`,
-      type: `time`
+      type: `string`,
+      primaryKey: true,
     },
 
     date: {
       sql: `date`,
-      type: `time`
+      type: `time`,
+      primaryKey: true,
     }
   },
 

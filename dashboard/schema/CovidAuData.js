@@ -6,11 +6,66 @@ cube(`CovidAuData`, {
     // Learn more here: https://cube.dev/docs/caching/pre-aggregations/getting-started
   },
 
+  joins: {
+    CovidAuDeathData: {
+      relationship: `hasMany`,
+      sql: `${CovidAuData}.state_code = ${CovidAuDeathData}.state_code`
+    },
+    CovidAuVaccinationData: {
+      relationship: `hasMany`,
+      sql: `${CovidAuData}.state_code = ${CovidAuVaccinationData}.state_code`
+    },
+  },
+
   measures: {
     cases: {
       sql: `confirmed`,
       type: `sum`,
-    }
+    },
+    total_cases: {
+      sql: `confirmed`,
+      type: `runningTotal`,
+    },
+    deaths: {
+      sql: `deaths`,
+      type: `sum`,
+    },
+    total_deaths: {
+      sql: `deaths`,
+      type: `runningTotal`,
+    },
+    tests: {
+      sql: `tests`,
+      type: `sum`,
+    },
+    total_tests: {
+      sql: `tests`,
+      type: `runningTotal`,
+    },
+    hosp: {
+      sql: `hosp`,
+      type: `sum`,
+    },
+    current_hosp: {
+      sql: `hosp_cum`,
+      type: `max`,
+    },
+    icu: {
+      sql: `icu`,
+      type: `sum`,
+    },
+    current_icu: {
+      sql: `icu_cum`,
+      type: `max`,
+    },
+    vent: {
+      sql: `vent`,
+      type: `sum`,
+    },
+    current_vent: {
+      sql: `vent_cum`,
+      type: `max`,
+    },
   },
 
   dimensions: {
@@ -22,7 +77,7 @@ cube(`CovidAuData`, {
 
     stateName: {
       sql: `state_name`,
-      type: `string`
+      type: `string`,
     },
 
     country: {

@@ -36,6 +36,57 @@ const xAxisFormatter = (item) => {
   }
 }
 
+const PieChartResponsive = ({ resultSet, height }) => {
+  const [seriesProps, setSeriesProps] = useState(
+    resultSet.seriesNames().reduce(
+      (a, { key }) => {
+        a[key] = false;
+        return a;
+      },
+      { hover: null }
+    )
+  );
+
+  const handleLegendMouseEnter = (e) => {
+    if (!seriesProps[e.payload.category]) {
+      setSeriesProps({ ...seriesProps, hover: e.payload.category });
+    }
+  };
+
+  const handleLegendMouseLeave = (e) => {
+    setSeriesProps({ ...seriesProps, hover: null });
+  };
+
+  return (
+    <ResponsiveContainer width="100%" height={height}>
+      <PieChart>
+        <Pie
+          isAnimationActive={false}
+          data={resultSet.chartPivot()}
+          nameKey="x"
+          dataKey={resultSet.seriesNames()[0].key}
+          fill="#8884d8"
+        >
+          {resultSet.chartPivot().map((series, index) => (
+            <Cell
+            key={index}
+            fill={colors[index % colors.length]}
+            fillOpacity={Number(
+              seriesProps.hover === series.category || !seriesProps.hover ? 1 : 0.6
+              )}
+              />
+          ))}
+        </Pie>
+        <Legend
+          onMouseOver={handleLegendMouseEnter}
+          onMouseOut={handleLegendMouseLeave}
+        />
+        <Tooltip />
+      </PieChart>
+    </ResponsiveContainer>
+  )
+}
+
 const CartesianChart = ({ resultSet, children, ChartComponent, height, chartType }) => {
   const [seriesProps, setSeriesProps] = useState(
     resultSet.seriesNames().reduce(
@@ -148,23 +199,8 @@ const TypeToChartComponent = {
     </CartesianChart>
   ),
   pie: ({ resultSet, height }) => (
-    <ResponsiveContainer width="100%" height={height}>
-      <PieChart>
-        <Pie
-          isAnimationActive={false}
-          data={resultSet.chartPivot()}
-          nameKey="x"
-          dataKey={resultSet.seriesNames()[0].key}
-          fill="#8884d8"
-        >
-          {resultSet.chartPivot().map((e, index) => (
-            <Cell key={index} fill={colors[index % colors.length]} />
-          ))}
-        </Pie>
-        <Legend />
-        <Tooltip />
-      </PieChart>
-    </ResponsiveContainer>
+    <PieChartResponsive resultSet={resultSet} height={height}>
+    </PieChartResponsive>
   ),
   table: ({ resultSet }) => (
     <Table

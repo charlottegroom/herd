@@ -7,7 +7,14 @@ cube(`CovidNswCasesByLocation`, {
   },
 
   joins: {
-
+    CovidNswTestsByLocation: {
+      relationship: `hasMany`,
+      sql: `${CovidNswCasesByLocation}.lga_code = ${CovidNswTestsByLocation}.lga_code`
+    },
+    CovidVaccinationByLga: {
+      relationship: `hasMany`,
+      sql: `${CovidNswCasesByLocation}.lga_code = ${CovidVaccinationByLga}.lga_code`
+    },
   },
 
   measures: {
@@ -20,27 +27,30 @@ cube(`CovidNswCasesByLocation`, {
   dimensions: {
     lgaName: {
       sql: `lga_name`,
-      type: `string`
+      type: `string`,
     },
 
     stateName: {
       sql: `state_name`,
-      type: `string`
+      type: `string`,
     },
 
     country: {
       sql: `country`,
-      type: `string`
+      type: `string`,
+      primaryKey: true,
     },
 
     lhdCode: {
       sql: `lhd_code`,
-      type: `string`
+      type: `string`,
+      primaryKey: true,
     },
 
     stateCode: {
       sql: `state_code`,
-      type: `string`
+      type: `string`,
+      primaryKey: true,
     },
 
     lhdName: {
@@ -50,12 +60,8 @@ cube(`CovidNswCasesByLocation`, {
 
     lgaCode: {
       sql: `lga_code`,
-      type: `string`
-    },
-
-    savedDate: {
-      sql: `saved_date`,
-      type: `time`
+      type: `string`,
+      primaryKey: true,
     },
 
     date: {

@@ -26,7 +26,6 @@ cube(`CovidAuDeathData`, {
     stateName: {
       sql: `state_name`,
       type: `string`,
-      primaryKey: true,
     },
 
     stateCode: {

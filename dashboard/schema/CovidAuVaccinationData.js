@@ -18,7 +18,21 @@ cube(`CovidAuVaccinationData`, {
     secondVaxDose: {
       sql: `vax_2_dose`,
       type: `sum`,
-    }
+    },
+    population: {
+      sql: `population`,
+      type: `sum`,
+    },
+    firstVaxDosePercent: {
+      sql: `${firstVaxDose} / ${population} * 100`,
+      type: `number`,
+      format: `percent`,
+    },
+    secondVaxDosePercent: {
+      sql: `${secondVaxDose} / ${population} * 100`,
+      type: `number`,
+      format: `percent`,
+    },
   },
 
   dimensions: {
@@ -31,19 +45,16 @@ cube(`CovidAuVaccinationData`, {
     stateName: {
       sql: `state_name`,
       type: `string`,
-      primaryKey: true,
     },
 
     sex: {
       sql: `sex`,
       type: `string`,
-      primaryKey: true,
     },
 
     ageGroup: {
       sql: `age_group`,
       type: `string`,
-      primaryKey: true,
     },
 
     country: {
