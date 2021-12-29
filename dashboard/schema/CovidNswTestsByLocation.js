@@ -20,7 +20,7 @@ cube(`CovidNswTestsByLocation`, {
 
   measures: {
     tests: {
-      sql: `tests`,
+      sql: `tests::int`,
       type: `sum`,
     }
   },

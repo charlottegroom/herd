@@ -12,26 +12,24 @@ cube(`CovidAuVaccinationData`, {
 
   measures: {
     firstVaxDose: {
-      sql: `vax_1_dose`,
-      type: `sum`,
+      sql: `vax_1_dose_diff`,
+      type: `runningTotal`,
     },
     secondVaxDose: {
-      sql: `vax_2_dose`,
-      type: `sum`,
+      sql: `vax_2_dose_diff`,
+      type: `runningTotal`,
     },
     population: {
       sql: `population`,
-      type: `sum`,
+      type: `max`,
     },
     firstVaxDosePercent: {
-      sql: `${firstVaxDose} / ${population} * 100`,
-      type: `number`,
-      format: `percent`,
+      sql: `vax_1_percent`,
+      type: `max`,
     },
     secondVaxDosePercent: {
-      sql: `${secondVaxDose} / ${population} * 100`,
-      type: `number`,
-      format: `percent`,
+      sql: `vax_2_percent`,
+      type: `max`,
     },
   },
 

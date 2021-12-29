@@ -19,26 +19,24 @@ cube(`CovidVaccinationByLga`, {
 
   measures: {
     firstVaxDose: {
-      sql: `vax_1_dose_15+`,
+      sql: `vax_1_dose_15_diff`,
       type: `sum`,
     },
     secondVaxDose: {
-      sql: `vax_1_dose_15+`,
+      sql: `vax_2_dose_15_diff`,
       type: `sum`,
     },
     population: {
-      sql: `population_15+`,
+      sql: `population_15`,
       type: `sum`,
     },
     firstVaxDosePercent: {
-      sql: `${firstVaxDose} / ${population} * 100`,
-      type: `number`,
-      format: `percent`,
+      sql: `vax_1_percent_15`,
+      type: `max`,
     },
     secondVaxDosePercent: {
-      sql: `${secondVaxDose} / ${population} * 100`,
-      type: `number`,
-      format: `percent`,
+      sql: `vax_2_percent_15`,
+      type: `max`,
     },
   },
 

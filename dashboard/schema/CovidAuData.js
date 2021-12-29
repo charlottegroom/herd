@@ -42,6 +42,11 @@ cube(`CovidAuData`, {
       sql: `tests`,
       type: `runningTotal`,
     },
+    positivityRate: {
+      sql: `${cases}/NULLIF(${tests},0) * 100`,
+      type: `number`,
+      format: `percent`,
+    },
     hosp: {
       sql: `hosp`,
       type: `sum`,

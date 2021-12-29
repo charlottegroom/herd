@@ -25,7 +25,7 @@ import "./recharts-theme.less";
 import moment from "moment";
 import numeral from "numeral";
 
-const numberFormatter = item => numeral(item).format("0,0");
+const numberFormatter = item => numeral(item).format("0.00");
 const dateFormatter = item => moment(item).format("DD MMM YY");
 const colors = ["#451dfe", "#e52e5c", "#e7d121", "#ca29f6", "#56fe2f", "#2ad3d6", "#fc2011", "#045c10", "#f887d6", "#1379eb"];
 const xAxisFormatter = (item) => {
