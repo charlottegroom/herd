@@ -23,4 +23,4 @@ $ npm run build
 
 The API Docker container image is deployed on Heroku. See [here](https://real-time-dashboard.cube.dev/deployment) for deployment steps.
 
-The current deployment of the API is at [https://herd-covid19-dashboard-web.herokuapp.com/#/]https://herd-covid19-dashboard-web.herokuapp.com/#/).
+The current deployment of the API is available at [https://herd-covid19-dashboard-web.herokuapp.com/#/](https://herd-covid19-dashboard-web.herokuapp.com/#/).
