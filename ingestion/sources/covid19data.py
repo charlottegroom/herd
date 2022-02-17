@@ -81,7 +81,7 @@ class Ingest(BaseIngest):
             # Transform fields
             df['state_name'] = df['state_code'].apply(lambda x: STATE_NAMES[x])
             df['age_group'] = df.apply(
-                lambda x: tuple(int(d) for d in x['age_bracket'].split('-')) \
+                lambda x: tuple(int(d or 0) for d in x['age_bracket'].strip().split('-')) \
                     if not pd.isnull(x['age_bracket']) else None,
                 axis=1
             )

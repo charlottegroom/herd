@@ -25,30 +25,32 @@
       mode: replace
     source:
       collection: covid-19-vaccination-vaccination-data
-- module: vaccinations
-  cfg:
-    sink:
-      type: postgres
-      name: covid_vaccination_by_lga
-      chunksize: 100
-      mode: replace
-    source:
-      collection: covid-19-vaccination-geographic-vaccination-rates-lga
-- module: nsw_government
-  cfg:
-    sink:
-      type: postgres
-      name: covid_nsw_tests_by_location
-      chunksize: 100
-      mode: replace
-    source:
-      resource_type: tests_by_location
-- module: nsw_government
-  cfg:
-    sink:
-      type: postgres
-      name: covid_nsw_cases_by_location
-      chunksize: 100
-      mode: replace
-    source:
-      resource_type: cases_by_location
+# - module: vaccinations
+#   cfg:
+#     sink:
+#       type: postgres
+#       name: covid_vaccination_by_lga
+#       chunksize: 100
+#       mode: replace
+#     source:
+#       collection: covid-19-vaccination-geographic-vaccination-rates-lga
+#       limit: 5
+# - module: nsw_government
+#   cfg:
+#     sink:
+#       type: postgres
+#       name: covid_nsw_tests_by_location
+#       chunksize: 100
+#       mode: replace
+#     source:
+#       resource_type: tests_by_location
+#       limit: 5
+# - module: nsw_government
+#   cfg:
+#     sink:
+#       type: postgres
+#       name: covid_nsw_cases_by_location
+#       chunksize: 100
+#       mode: replace
+#     source:
+#       resource_type: cases_by_location

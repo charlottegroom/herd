@@ -66,8 +66,7 @@ cube(`CovidNswTestsByLocation`, {
 
     date: {
       sql: `date`,
-      type: `time`,
-      primaryKey: true,
+      type: `time`
     }
   },
 

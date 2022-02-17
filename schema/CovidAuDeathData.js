@@ -47,9 +47,8 @@ cube(`CovidAuDeathData`, {
 
     date: {
       sql: `date`,
-      type: `time`,
-      primaryKey: true,
-    },
+      type: `time`
+    }
   },
 
   dataSource: `default`

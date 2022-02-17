@@ -13,10 +13,8 @@ const jwt = require('jsonwebtoken');
 const CUBE_API_SECRET = '7f6d88f09e638149ba20ca552af5bf9df3e803785796ff211b6afb3420ec85cb3e8554843ec87c3e84cb055c75f15769b6cb0aa61b27dce789b21a6f069f50e7'
 const cubejsToken = jwt.sign({}, CUBE_API_SECRET, { expiresIn: '30d' });
 const cubejsApi = cubejs(cubejsToken, {
-  apiUrl: "https://herd-covid-dashboard-app-api.herokuapp.com/cubejs-api/v1",
+  apiUrl: "https://herd-covid19-dashboard-api.herokuapp.com/cubejs-api/v1",
 });
-
-console.log(cubejsToken)
 
 const AppLayout = ({ location, children }) => (
   <Layout style={{ height: "100%" }}>
