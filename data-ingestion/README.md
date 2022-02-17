@@ -143,7 +143,7 @@ where the field `module` refers to the name of the script which houses the `Inge
 
 ## Development
 
-Install dependencies (within the ingestion folder):
+Install dependencies (within the data-ingestion folder):
 ```sh
 $ python3.8 -m virtualenv venv
 $ . venv/bin/activate

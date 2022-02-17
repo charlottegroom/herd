@@ -1,21 +1,21 @@
-- module: covid19data
-  cfg:
-    sink:
-      type: postgres
-      name: covid_au_data
-      chunksize: 100
-      mode: replace
-    source:
-      filename: COVID_AU_state.csv
-- module: covid19data
-  cfg:
-    sink:
-      type: postgres
-      name: covid_au_death_data
-      chunksize: 100
-      mode: replace
-    source:
-      filename: COVID_AU_deaths.csv
+# - module: covid19data
+#   cfg:
+#     sink:
+#       type: postgres
+#       name: covid_au_data
+#       chunksize: 100
+#       mode: replace
+#     source:
+#       filename: COVID_AU_state.csv
+# - module: covid19data
+#   cfg:
+#     sink:
+#       type: postgres
+#       name: covid_au_death_data
+#       chunksize: 100
+#       mode: replace
+#     source:
+#       filename: COVID_AU_deaths.csv
 - module: vaccinations
   cfg:
     sink:
