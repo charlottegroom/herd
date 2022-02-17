@@ -1,6 +1,5 @@
 '''Retrieve and process vaccination data'''
 
-import requests
 import pandas as pd
 from requests.sessions import Session
 import pandera as pa
@@ -113,7 +112,7 @@ class Ingest(BaseIngest):
                     _doc['state_code'] = state
                     _doc['country'] = 'Australia'
                     population = doc[f'{state} - Population 16 and over']
-                    vax_1_dose = doc[f'{state} - Residence state - Number of people 50 and over with 1 dose']
+                    vax_1_dose = doc[f'{state} - Residence state - Number of people 16 and over with 1 dose']
                     vax_2_dose = doc[f'{state} - Residence state - Number of people 16 and over fully vaccinated']
                     _doc['vax_1_dose'] = vax_1_dose
                     _doc['vax_2_dose'] = vax_2_dose
